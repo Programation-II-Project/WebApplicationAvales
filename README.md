@@ -1,6 +1,9 @@
 # WebApplicationAvales
 Repositorio para el desarrollo de una aplicación web para avales
 Hola.
+
+PARA VER DE FORMA ORDENADA EL ARCHIVO HAGAN CLIC EN EL ICONO DE EDITAR DEL ARCHIVO (UBICADA EN LA ESQUINA SUPERIOR DERECHA DE ESTE CUADRO)
+
 El repositorio está hecho de tal manera que cada uno de nosotros tenga una branch personal conectada con la master, en dicha branch personal
 cada quien subirá sus contribuciones con el respectivo commit que describa que hicieron, además, cada persona solo deberia tener permiso de
 subir contenido a su propia branch, esto es algo que ya se limito en las configuraciones del repositorio.

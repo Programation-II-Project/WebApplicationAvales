@@ -25,6 +25,11 @@ Pasos para hacer un rebase.
     
 Y listo, ya deberian estar acualizados para trabajar.
 
+Instruccion generales en Fork:
+    1-Al iniciar su trabajo siempre presionen el boton Fetch, marquen la casilla Fetch all remotes, y luego al boton fetch del cuadro         emergente
+    2-Flecha hacia abajo sobre una branch, presionen pull
+    3-Flecha hacia arriba sobre una branch, presione  push.
+
 Nota: Por razones de seguridad solo está permitido que cada uno suba modificaciones a su propia branch.
 
 Cualquier duda, escribanme.

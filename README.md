@@ -25,10 +25,30 @@ Pasos para hacer un rebase.
     
 Y listo, ya deberian estar acualizados para trabajar.
 
+
+
+
+
+
 Instruccion generales en Fork:
     1-Al iniciar su trabajo siempre presionen el boton Fetch, marquen la casilla Fetch all remotes, y luego al boton fetch del cuadro         emergente
     2-Flecha hacia abajo sobre una branch, presionen pull
     3-Flecha hacia arriba sobre una branch, presione  push.
+
+
+
+
+¿Qué poner en los commits?
+    Con el fin de trabajar ordenados, cada uno llevará una linea de actualización en su propia branch. Cuando hacen un commit desde fork les aparecen dos campos que rellenar, un titulo y una descripción.
+
+    en el titulo pondran: Un nombre resumen de lo que hicieron junto con la fecha y hora que lo suben
+    en la descripción: Ualgo mas detallado del trabajo
+      Ejemplo:
+            Commit 1.0 Adding Title 5/4/2020 16:56
+            He agregado el titulo a diversas paginas de la sección de Java
+     
+     No es necesario que en un solo commit metan todos los cambios que han hecho, en la ventana de hacer los commits pueden seleccionar      que cosas subir en ese commit con el boton Stash. asi pueden segmentar sus commits sin tener problemas por si quieren trabajar en        muchas cosas distintas que no podrian ir en el mismo commit ( principalmente porque son de naturaleza diferente, por ejemplo,            cambiar una tabla y agregar linea de código)
+
 
 Nota: Por razones de seguridad solo está permitido que cada uno suba modificaciones a su propia branch.
 

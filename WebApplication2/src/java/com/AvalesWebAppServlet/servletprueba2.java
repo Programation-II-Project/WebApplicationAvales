@@ -15,7 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Abel_uujunkn
+ * @author Abel_Prueba sin permisos
+ * Queremos ver si puedo darle push a una que no sea mía sin mis permisos de admin
  */
 @WebServlet(name = "servletprueba2", urlPatterns = {"/servletprueba2"})
 public class servletprueba2 extends HttpServlet {

@@ -15,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author fer10
+ * @author Abel_uujunkn
  */
-@WebServlet(name = "ServeletExample", urlPatterns = {"/ServeletExample"})
-public class ServeletExample extends HttpServlet {
+@WebServlet(name = "servletprueba2", urlPatterns = {"/servletprueba2"})
+public class servletprueba2 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +37,10 @@ public class ServeletExample extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServeletExample</title>");            
+            out.println("<title>Servlet servletprueba2</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ServeletExample at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet servletprueba2 at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

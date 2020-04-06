@@ -15,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Abel_uujunkn
+ * @author Abel_
  */
-@WebServlet(name = "servletprueba2", urlPatterns = {"/servletprueba2"})
-public class servletprueba2 extends HttpServlet {
+@WebServlet(name = "RegisterLoginServlet", urlPatterns = {"/RegisterLoginServlet"})
+public class RegisterLoginServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,19 +30,18 @@ public class servletprueba2 extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet servletprueba2</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet servletprueba2 at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            throws ServletException, IOException 
+    {
+        String stringform = request.getParameter("formid");
+        
+        if (stringform.equals("1")) 
+        { 
+        request.getRequestDispatcher("register.jsp").forward(request, response);
+        }
+        
+        if (stringform.equals("2")) 
+        { 
+        request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
 

@@ -76,5 +76,16 @@ public class registerLogic extends Logic
          
          return nuevoRegistroList;
     }
+
+    public boolean insertRegister(String p_strNombre, String p_strTelefonoCasa, String p_strCelular, String p_strProfesion, String p_strDireccion, String p_strFecha, String p_strEstatus, 
+                                String p_strEmail, int p_intFamilia, int p_intIglesia, int p_intGobierno, int p_intMc, int p_intEducacion, int p_intEconomia, int p_intArtes, String p_strFacebook, String p_strTwitter) 
+    {
+    boolean bHasFailed;
+    DatabaseX database = getDatabase();
+    bHasFailed = database.executeNonQueryBool("INSERT INTO proyecto.registros"
+            + "(Nombre, Telefono_Casa, Celular, Profesion, Direccion, Fecha_Nacimiento, Estado_Civil, Email, Familia, Iglesia, Gobierno, MC, Educacion, Economia, Artes, Facebook, Twitter) "
+            + "VALUES('"+p_strNombre+"','"+p_strTelefonoCasa+"', '"+p_strCelular+"', '"+p_strProfesion+"', '"+p_strDireccion+"', '"+p_strFecha+"', '"+p_strEstatus+"', '"+p_strEmail+"', "+p_intFamilia+", "+p_intIglesia+", "+p_intGobierno+", "+p_intMc+","+p_intEducacion+", "+p_intEconomia+", "+p_intArtes+", '"+p_strFacebook+"', '"+p_strTwitter+"');"); 
+    return bHasFailed;
+    }
     
 }

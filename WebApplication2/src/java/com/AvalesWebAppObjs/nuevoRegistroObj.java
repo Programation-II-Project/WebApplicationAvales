@@ -4,7 +4,7 @@ package com.AvalesWebAppObjs;
 
 public class nuevoRegistroObj 
 {
-    
+    private int id;
     private String nombre;
     private String telefono_casa;
     private String celular;
@@ -22,11 +22,11 @@ public class nuevoRegistroObj
     private String facebook;
     private String twitter;
 
-    public nuevoRegistroObj(String p_nombre, String p_telefono_casa, String p_celular, String p_profesion, String p_direccion, 
+    public nuevoRegistroObj(int p_id,String p_nombre, String p_telefono_casa, String p_celular, String p_profesion, String p_direccion, 
             String p_fecha, String p_estado_civil, String p_email, int p_familia, int p_iglesia, int p_gobierno, int p_mc, int p_economia, 
             int p_arte, String p_facebook, String p_twitter) 
     {
-        
+        setId(p_id);
         setNombre(p_nombre);
         setTelefono_casa(p_telefono_casa);
         setCelular(p_celular);
@@ -45,7 +45,13 @@ public class nuevoRegistroObj
         setTwitter(p_twitter);
     }
 
-    
+    public int getId() {
+        return id;
+    }
+
+    private void setId(int p_id) {
+        id = p_id;
+    }
     
     public String getNombre() {
         return nombre;

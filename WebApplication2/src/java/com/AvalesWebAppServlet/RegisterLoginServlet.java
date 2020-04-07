@@ -1,7 +1,9 @@
 
 package com.AvalesWebAppServlet;
-
+import com.AvalesWebAppLogics.registerLogic;
+import com.AvalesWebAppObjs.nuevoRegistroObj;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,23 +13,19 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "RegisterLoginServlet", urlPatterns = {"/RegisterLoginServlet"})
 public class RegisterLoginServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
         String stringform = request.getParameter("formid");
         
         if (stringform.equals("1")) 
-        { 
-        request.getRequestDispatcher("register.jsp").forward(request, response);
+        {
+            registerLogic CLogic = new registerLogic();
+            List<nuevoRegistroObj> nuevoRegistroList = CLogic.getAllIncome();
+            
+            request.getSession().setAttribute("nuevoRegistroList", nuevoRegistroList);
+            request.getRequestDispatcher("register.jsp")
+                    .forward(request, response);
         }
         
         if (stringform.equals("2")) 

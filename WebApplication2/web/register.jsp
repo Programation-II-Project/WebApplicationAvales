@@ -20,26 +20,28 @@
         <br><br>
         
         <form action="RegisterLoginServlet" method="get">
-            Nombre: <input type="text" name="f_nombre" />*
+            Nombre: <input type="text" name="f_nombre" required/>
+            <br><br>
+            Email: <input type="text" name="f_email" required/>
+            <br><br>
+            Contraseña:  <input type="password" name="f_password" required>
             <br><br>
             Telefono casa: <input type="text" name="f_telefono" />
             <br><br>
-            Celular: <input type="text" name="f_celular" />*
+            Celular: <input type="text" name="f_celular" required/>
             <br><br>
-            Profesión: <input type="text" name="f_profesion" />*
+            Profesión: <input type="text" name="f_profesion" required/>
             <br><br>
-            Dirección: <input type="text" name="f_direccion" />*
+            Dirección: <input type="text" name="f_direccion" required/>
             <br><br>
-            Fecha de nacimiento: <input type="text" name="f_fecha" />*
+            Fecha de nacimiento: <input type="date" name="f_fecha" required/>
             <br><br>
             Estado Civil: <select id="f_estatus" name="f_estatus">
                           <option value="Soltero">Soltero/a</option>
                           <option value="Casado">Casado/a</option>
                           <option value="Divorciado">Divorciado/a</option>
                           </select>*
-            <br><br>
-            Email: <input type="text" name="f_email" />
-            <br><br>
+            <br><br>    
             Facebook: <input type="text" name="f_facebook" />
             <br><br>
             Twitter: <input type="text" name="f_twitter" />

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : login
-    Created on : abr 6, 2020, 3:11:42 p.m.
+    Document   : loginAdmin
+    Created on : abr 8, 2020, 3:12:59 p.m.
     Author     : Abel_
 --%>
 
@@ -9,18 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login</title>
+        <title>JSP Page</title>
     </head>
     <body>
         <h1>Hello User!</h1>
         <br><br>
         <form action="RegisterLoginServlet" method="get">
-            Email: <input type="text" name="fl_email" />
+            Username: <input type="text" name="fadmin_username" />
             <br><br>
-            Contraseña:  <input type="password" name="fl_password">
+            Contraseña:  <input type="password" name="fadmin_password">
             <br><br>          
             <input type="submit" value="Login" />
-            <input type="hidden" name="formid" value="2" />
+            <input type="hidden" name="formid" value="3" />
         </form>
         <a href="index.html">Back</a>
     </body>

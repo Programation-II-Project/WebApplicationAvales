@@ -1,6 +1,8 @@
 
 package com.AvalesWebAppServlet;
 import com.AvalesWebAppLogics.registerLogic;
+import com.AvalesWebAppObjs.Admin;
+import com.AvalesWebAppObjs.nuevoRegistroObj;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +16,7 @@ public class RegisterLoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
+        
         String stringform = request.getParameter("formid");
         
         if (stringform.equals("1")) 
@@ -26,6 +29,7 @@ public class RegisterLoginServlet extends HttpServlet {
             String s_fecha = request.getParameter("f_fecha");
             String s_estatus = request.getParameter("f_estatus");
             String s_email = request.getParameter("f_email");
+            String s_password = request.getParameter("f_password");
             
             String sa_familia = request.getParameter("f_familia");
             String sa_iglesia = request.getParameter("f_iglesia");
@@ -45,41 +49,69 @@ public class RegisterLoginServlet extends HttpServlet {
             
             String s_facebook = request.getParameter("f_facebook");
             String s_twitter = request.getParameter("f_twitter");
-            
-            System.out.println(s_nombre);
-            System.out.println(s_telefono);
-            System.out.println(s_celular);
-            System.out.println(s_profesion);
-            System.out.println(s_direccion);
-            System.out.println(s_fecha);
-            System.out.println(s_estatus);
-            System.out.println(s_email);
-            System.out.println(s_familia);
-            System.out.println(s_iglesia);
-            System.out.println(s_estado);
-            System.out.println(s_mc);
-            System.out.println(s_educacion);
-            System.out.println(s_economia);
-            System.out.println(s_artes);
-            System.out.println(s_twitter);
-            System.out.println(s_facebook);
-            
-            
+
             registerLogic CLogic = new registerLogic();
             boolean bHasFailed = CLogic.insertRegister(s_nombre,s_telefono,s_celular,s_profesion,
                     s_direccion, s_fecha, s_estatus, s_email, s_familia, s_iglesia, s_estado, s_mc,
-                    s_educacion, s_economia, s_artes, s_facebook, s_twitter);
+                    s_educacion, s_economia, s_artes, s_facebook, s_twitter, s_password);
             
             
             request.getSession().setAttribute("bHasFailed", bHasFailed);
-            request.getRequestDispatcher("index.html")
+            request.getRequestDispatcher("registro1exito.jsp")
                     .forward(request, response);
         }
         
-        if (stringform.equals("2")) 
-        { 
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        
+        
+        if (stringform.equals("2"))
+        {
+            String email = request.getParameter("fl_email");
+            String password = request.getParameter("fl_password");
+            
+            registerLogic CLogic2 = new registerLogic();
+            nuevoRegistroObj InfoLogin = 
+                    CLogic2.getUserInfo(email, password);
+   
+            if(InfoLogin!=null)
+            {
+                //log the user     
+                request.getSession().setAttribute("logged_user", InfoLogin);
+                request.getRequestDispatcher("perfil.jsp")
+                        .forward(request, response);
+            }
+            else 
+            {
+                //issue with the user   
+                request.getRequestDispatcher("login.jsp")
+                        .forward(request, response);
+            }
         }
+        
+        if (stringform.equals("3"))
+        {
+            String username = request.getParameter("fadmin_username");
+            String password = request.getParameter("fadmin_password");
+            
+            registerLogic CLogic3 = new registerLogic();
+            Admin InfoLogin = 
+                    CLogic3.getAdminInfo(username, password);
+   
+            if(InfoLogin!=null)
+            {
+                //log the user     
+                request.getSession().setAttribute("logged_user", InfoLogin);
+                request.getRequestDispatcher("PerfilDeAdmin.jsp")
+                        .forward(request, response);
+            }
+            else 
+            {
+                //issue with the user   
+                request.getRequestDispatcher("loginAdmin.jsp")
+                        .forward(request, response);
+            }
+        }
+        
+ 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

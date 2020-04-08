@@ -17,14 +17,16 @@ public class nuevoRegistroObj
     private int iglesia;
     private int gobierno;
     private int mc;
+    private int educacion;
     private int economia;
     private int arte;
     private String facebook;
     private String twitter;
+    private String password;
 
     public nuevoRegistroObj(int p_id,String p_nombre, String p_telefono_casa, String p_celular, String p_profesion, String p_direccion, 
-            String p_fecha, String p_estado_civil, String p_email, int p_familia, int p_iglesia, int p_gobierno, int p_mc, int p_economia, 
-            int p_arte, String p_facebook, String p_twitter) 
+            String p_fecha, String p_estado_civil, String p_email, int p_familia, int p_iglesia, int p_gobierno, int p_mc, int p_educacion, int p_economia, 
+            int p_arte, String p_facebook, String p_twitter, String p_password) 
     {
         setId(p_id);
         setNombre(p_nombre);
@@ -39,12 +41,29 @@ public class nuevoRegistroObj
         setIglesia(p_iglesia);
         setGobierno(p_gobierno);
         setMc(p_mc);
+        setEducacion(p_educacion);
         setEconomia(p_economia);
         setArte(p_arte);
         setFacebook(p_facebook);
         setTwitter(p_twitter);
+        setPassword(p_password);
+        
+    }
+    public int getEducacion() {
+        return educacion;
     }
 
+    private void setEducacion(int p_educacion) {
+        educacion = p_educacion;
+    }
+        
+    public String getPassword() {
+        return password;
+    }
+
+    private void setPassword(String p_password) {
+        password = p_password;
+    }
     public int getId() {
         return id;
     }

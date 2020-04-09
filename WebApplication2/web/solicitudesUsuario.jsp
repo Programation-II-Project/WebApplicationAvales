@@ -9,10 +9,14 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
+    
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
     </head>
     <%
         List<solicitudAyudaObj> listaDeAyudas = 
@@ -45,8 +49,8 @@
                         <td><%= CTemp.getFecha() %></td>
             <%
                         if (CTemp.getAprobacion()==null) 
-                        {    
-            %>
+                        {   
+            %>              
                             <td>En espera de aprobación</td>
             <%          }
                         else
@@ -57,13 +61,13 @@
                         }
             %>
                             <td>
-                                    <a>
-                                        <i class="fas fa-edit"></i>
+                                    <a href="ServletUsuario?formid=3&id=<%= CTemp.getIdSolicitud() %>&aprobacion=<%= CTemp.getAprobacion() %>">
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
                                 <td>
                                     <a>
-                                        <i class="fas fa-trash"></i>
+                                        <i class="fas fa-edit"></i>
                                     </a>
                                 </td>        
                             </tr>

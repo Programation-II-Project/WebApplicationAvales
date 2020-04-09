@@ -1,7 +1,7 @@
 <%-- 
     Document   : PerfilDeAdmin
     Created on : abr 8, 2020, 3:24:27 p.m.
-    Author     : Abel_
+    Author     : Abel_Yo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

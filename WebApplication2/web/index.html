@@ -6,19 +6,46 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>AVALES</title>
+        <title>AVALES </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Añadir los links para jar y bulma-->
+        
+        <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+
     </head>
     <body>
-        <h1>AVALES</h1>
-        <br><br>
-        
-        <a href="register.jsp">Register</a>
-        <br><br>
-        <a href="login.jsp">Login</a>
-        <br><br>
-        <a href="loginAdmin.jsp">Login as Administrator</a>
-        <br><br>
-    </body>
+        <!-- ENCABEZADO-->              
+                <section class="section">
+                    <div class="container">
+                        <div class="columns">
+                            <div class="column is-0-desktop">
+                                    <figure class="image is-128x128">
+                                        <img src="styles/Imagenes/avales.png" alt=""/>
+                                    </figure>
+                                <div class="field">
+                                    <div style='background: darkblue; padding: 5px '>
+                                        <div class="control">
+
+                                            <a href="register.jsp">
+                                                <input class="button is-link is-small" type="submit" value="Register"></input>
+                                            </a>
+
+                                            <a href="login.jsp">
+                                                <input class="button is-link is-small" type="submit" value="Login"></input>
+                                            </a>
+
+                                            <a href="loginAdmin.jsp">
+                                                <input class="button is-link is-small" type="submit" value="Login as Administrator"></input>
+                                            </a>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </section>
+        </body>
 </html>

@@ -63,5 +63,15 @@ public class ayudaLogic extends Logic
         }
         return totalAyudas;
     }
+
+    public boolean deleteHelp(int int_id) 
+    {
+    boolean delete;
+    DatabaseX database = getDatabase();
     
+    delete = database.executeNonQueryBool("DELETE "
+            + "FROM proyecto.solicitudayuda "
+            + "WHERE idsolicitudAyuda="+int_id+";"); 
+    return delete;
+    }
 }

@@ -52,7 +52,33 @@ public class ServletUsuario extends HttpServlet
                 request.getRequestDispatcher("solicitudesUsuario.jsp")
                     .forward(request, response);
             }
+            
+            if (stringform.equals("3"))
+            {
+                    String aprobacion = request.getParameter("aprobacion");
+                    String id = request.getParameter("id");
+                    int int_id = Integer.parseInt(id);
+                    
+                    if(!aprobacion.equals("Aprobado") & !aprobacion.equals("No aprobado"))
+                    {
+                    ayudaLogic CLogic = new ayudaLogic();
+                    boolean borrarAyuda = CLogic.deleteHelp(int_id);
+
+                    request.getSession().setAttribute("delete", borrarAyuda);
+                    request.getRequestDispatcher("ServletUsuario?formid=2")
+                        .forward(request, response);
+                    
+                    }
+                        else
+                    {
+                        request.getRequestDispatcher("ServletUsuario?formid=2")
+                        .forward(request, response);
+                    }
+            }
+                
         }
+            
+        
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

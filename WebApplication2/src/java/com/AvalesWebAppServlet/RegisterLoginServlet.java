@@ -63,6 +63,7 @@ public class RegisterLoginServlet extends HttpServlet {
         
         
         
+                
         if (stringform.equals("2"))
         {
             String email = request.getParameter("fl_email");
@@ -71,7 +72,8 @@ public class RegisterLoginServlet extends HttpServlet {
             registerLogic CLogic2 = new registerLogic();
             nuevoRegistroObj InfoLogin = 
                     CLogic2.getUserInfo(email, password);
-   
+            
+            
             if(InfoLogin!=null)
             {
                 //log the user     
@@ -89,6 +91,7 @@ public class RegisterLoginServlet extends HttpServlet {
         
         if (stringform.equals("3"))
         {
+           
             String username = request.getParameter("fadmin_username");
             String password = request.getParameter("fadmin_password");
             

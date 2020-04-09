@@ -20,5 +20,9 @@
     %>
     <body> 
         <h1>Hola <%= user.getNombre() %></h1>
+        <br><br>
+        <a href="solicitudDeAyuda.jsp">Solicitar ayuda especializada</a>
+        <br><br>
+        <a href="ServletUsuario?formid=2">Ver tus solicitudes y administrarlas</a>
     </body>
 </html>

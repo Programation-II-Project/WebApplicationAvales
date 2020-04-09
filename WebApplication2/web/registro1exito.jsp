@@ -26,7 +26,7 @@
         %>
         <p>Datos guardados con exito, ¿desea ingresar a su cuenta o seguir conociendo los diferentes proyectos de AVALES?</p>
         <a href="index.html">AVALES</a>
-        <a href="´perfil.jsp">PERFIL</a> 
+        <a href="perfil.jsp">PERFIL</a> 
         <%
             }
             else

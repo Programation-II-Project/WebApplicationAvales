@@ -71,7 +71,7 @@ public class ServletUsuario extends HttpServlet
                     }
                         else
                     {
-                        request.getRequestDispatcher("ServletUsuario?formid=2")
+                        request.getRequestDispatcher("errorBorrarSolicitud")
                         .forward(request, response);
                     }
             }

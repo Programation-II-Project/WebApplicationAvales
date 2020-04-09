@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1>NO PUEDES BORRAR ESTA SOLICITUD YA QUE YA HA SIDO ACEPTADA</h1>
+        <a href="ServletUsuario?formid=2">Back</a>
     </body>
 </html>

@@ -24,5 +24,7 @@
         <a href="solicitudDeAyuda.jsp">Solicitar ayuda especializada</a>
         <br><br>
         <a href="ServletUsuario?formid=2">Ver tus solicitudes y administrarlas</a>
+        <br><br>
+        <a href="index.html">Volver a Avales</a>
     </body>
 </html>

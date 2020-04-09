@@ -1,7 +1,7 @@
 <%-- 
     Document   : perfil
     Created on : abr 8, 2020, 12:16:09 p.m.
-    Author     : Abel_
+    Author     : Abel
 --%>
 
 <%@page import="java.util.Iterator"%>
@@ -24,5 +24,7 @@
         <a href="solicitudDeAyuda.jsp">Solicitar ayuda especializada</a>
         <br><br>
         <a href="ServletUsuario?formid=2">Ver tus solicitudes y administrarlas</a>
+        <br><br>
+        <a href="index.html">Volver a Avales</a>
     </body>
 </html>

@@ -76,6 +76,7 @@
                 }
             %>
         </table>
-        
+        <br><br> 
+        <a href="perfil.jsp">Back</a>
     </body>
 </html>

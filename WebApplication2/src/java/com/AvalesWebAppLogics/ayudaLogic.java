@@ -85,4 +85,65 @@ public class ayudaLogic extends Logic
                 + "WHERE idsolicitudAyuda = "+idSolicitud+";");
         return updateHasFailed;
     }
+
+    public List<solicitudAyudaObj> getAllHelps() 
+    {
+        ArrayList<solicitudAyudaObj> totalAyudas = null;
+        DatabaseX database = getDatabase();
+        
+        ResultSet CResult = database.executeQuery("SELECT * "
+                + "FROM proyecto.solicitudayuda;");
+        
+        if(CResult!=null)
+        {
+            int IDsolicitud;
+            int ID;
+            String proyecto;
+            String descripcion;
+            String date;
+            String aprobacion;
+            solicitudAyudaObj CTemp;
+            totalAyudas = new ArrayList<>();
+            
+            try {
+                while(CResult.next())
+                {
+                    IDsolicitud = CResult.getInt("idsolicitudAyuda");
+                    ID = CResult.getInt("ID");
+                    proyecto = CResult.getString("Proyecto");
+                    descripcion = CResult.getString("Descripcion");
+                    date = CResult.getString("Fecha");
+                    aprobacion = CResult.getString("Aprobacion");
+                    
+                    CTemp = new solicitudAyudaObj(IDsolicitud,ID,proyecto,descripcion,date, aprobacion);
+                    totalAyudas.add(CTemp);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(ayudaLogic.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+        return totalAyudas;
+    }
+
+
+    public boolean rechazarSolicitud(int IDsolicitud) 
+    {
+        boolean rechazarHasFailed;
+        DatabaseX database = getDatabase();
+        rechazarHasFailed = database.executeNonQueryBool("UPDATE proyecto.solicitudayuda "
+                + "SET Aprobacion = 'No aprobado' "
+                + "WHERE idsolicitudAyuda = "+IDsolicitud+";");
+        return rechazarHasFailed;
+    }
+
+    public boolean aprobarSolicitud(int IDsolicitud) 
+    {
+        boolean aprobarHasFailed;
+        DatabaseX database = getDatabase();
+        aprobarHasFailed = database.executeNonQueryBool("UPDATE proyecto.solicitudayuda "
+                + "SET Aprobacion = 'Aprobado' "
+                + "WHERE idsolicitudAyuda = "+IDsolicitud+";");
+        return aprobarHasFailed;
+    }
 }

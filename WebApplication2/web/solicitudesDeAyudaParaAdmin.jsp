@@ -43,7 +43,7 @@
                         CTemp = ite.next();
             %>
                     <tr>
-                        <td><%= CTemp.getIdUser() %></td>
+                        <td><a href="ServletAdmin?formid=4&id=<%= CTemp.getIdUser() %>" ><%= CTemp.getIdUser() %></a></td>
                         <td><%= CTemp.getProyecto() %></td>
                         <td><%= CTemp.getDescripcion() %></td>
                         <td><%= CTemp.getFecha() %></td>

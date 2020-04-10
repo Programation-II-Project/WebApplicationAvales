@@ -1,6 +1,8 @@
 package com.AvalesWebAppServlet;
 
 import com.AvalesWebAppLogics.ayudaLogic;
+import com.AvalesWebAppLogics.registerLogic;
+import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
 import java.io.IOException;
 import java.util.List;
@@ -75,6 +77,23 @@ public class ServletAdmin extends HttpServlet {
                         request.getRequestDispatcher("noEditarSolicitud.jsp")
                         .forward(request, response);
                     }
+            }
+        
+        if (stringform.equals("4"))
+            {
+                    String ID = request.getParameter("id");
+                    int IDsolicitud = Integer.parseInt(ID);
+                    
+                    
+                    
+                    registerLogic CLogic = new registerLogic();
+                    nuevoRegistroObj registroPedido = CLogic.getUserByID(IDsolicitud);
+
+                    request.getSession().setAttribute("registroPedido", registroPedido);
+                    request.getRequestDispatcher("InfoDelUsuarioParaAdmin.jsp")
+                        .forward(request, response);
+                    
+                    
             }
         
     }

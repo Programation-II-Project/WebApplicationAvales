@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>NO PUEDES EDITAR ESTA SOLICITUD YA QUE YA HA SIDO ACEPTADA</h1>
+        <h1>NO PUEDES EDITAR ESTA SOLICITUD YA QUE YA HA SIDO TOMADA UNA DESICION POR PARTE DE LOS ADMINISTRADORES</h1>
         <a href="ServletUsuario?formid=2">Back</a>
     </body>
 </html>

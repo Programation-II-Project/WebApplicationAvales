@@ -2,6 +2,7 @@ package com.AvalesWebAppLogics;
 
 import balcorpfw.database.DatabaseX;
 import balcorpfw.logic.Logic;
+import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -146,4 +147,5 @@ public class ayudaLogic extends Logic
                 + "WHERE idsolicitudAyuda = "+IDsolicitud+";");
         return aprobarHasFailed;
     }
+
 }

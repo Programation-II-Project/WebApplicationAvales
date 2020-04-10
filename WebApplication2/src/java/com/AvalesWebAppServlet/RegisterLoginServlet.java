@@ -56,6 +56,16 @@ public class RegisterLoginServlet extends HttpServlet {
                     s_educacion, s_economia, s_artes, s_facebook, s_twitter, s_password);
             
             
+            registerLogic CLogic2 = new registerLogic();
+            nuevoRegistroObj registroEntrante = CLogic2.getUserInfo(s_email, s_password);
+            
+
+            registroEntrante = new nuevoRegistroObj(registroEntrante.getId(),s_nombre,s_telefono,s_celular,s_profesion,
+                    s_direccion, s_fecha, s_estatus, s_email, s_familia, s_iglesia, s_estado, s_mc,
+                    s_educacion, s_economia, s_artes, s_facebook, s_twitter, s_password);
+            
+            
+            request.getSession().setAttribute("registroEntrante", registroEntrante);
             request.getSession().setAttribute("bHasFailed", bHasFailed);
             request.getRequestDispatcher("registro1exito.jsp")
                     .forward(request, response);

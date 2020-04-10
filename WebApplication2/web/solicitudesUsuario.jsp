@@ -66,7 +66,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <a>
+                                    <a href="ServletUsuario?formid=4&id=<%= CTemp.getIdSolicitud() %>&aprobacion=<%= CTemp.getAprobacion() %>&iduser=<%= CTemp.getIdUser() %>&proyecto=<%= CTemp.getProyecto() %>&descripcion=<%= CTemp.getDescripcion() %>&fecha=<%= CTemp.getFecha() %>">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 </td>        

@@ -15,7 +15,7 @@
         <h1>Hello User!</h1>
         <br><br>
         <form action="RegisterLoginServlet" method="get">
-            Username: <input type="text" name="fadmin_username" />
+            Username: <input type="text" name="fadmin_username"/>
             <br><br>
             Contraseña:  <input type="password" name="fadmin_password">
             <br><br>          

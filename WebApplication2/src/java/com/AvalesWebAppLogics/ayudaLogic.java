@@ -74,4 +74,15 @@ public class ayudaLogic extends Logic
             + "WHERE idsolicitudAyuda="+int_id+";"); 
     return delete;
     }
+
+    public boolean UpdateHelp(int idSolicitud, String proyecto, String descripcion) 
+    {
+        boolean updateHasFailed;
+        DatabaseX database = getDatabase();
+        updateHasFailed = database.executeNonQueryBool("UPDATE proyecto.solicitudayuda "
+                + "SET Proyecto = '"+proyecto+"',"
+                + "Descripcion = '"+descripcion+"' "
+                + "WHERE idsolicitudAyuda = "+idSolicitud+";");
+        return updateHasFailed;
+    }
 }

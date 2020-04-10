@@ -99,9 +99,25 @@ public class ServletUsuario extends HttpServlet
                     }
                         else
                     {
-                        request.getRequestDispatcher("errorBorrarSolicitud.jsp")
+                        request.getRequestDispatcher("errorEditarSolicitud.jsp")
                         .forward(request, response);
                     }
+            }
+            
+            if (stringform.equals("5"))
+            {
+                solicitudAyudaObj ayudaActual = 
+                            (solicitudAyudaObj)request.getSession().getAttribute("ayudaAEditar");
+                
+                String proyecto = request.getParameter("f_proyecto");
+                String descripcion = request.getParameter("f_descripcion");
+                
+                ayudaLogic CLogic = new ayudaLogic();
+                
+                boolean updateHelp = CLogic.UpdateHelp(ayudaActual.getIdSolicitud(), proyecto, descripcion);
+                request.getSession().setAttribute("updateHelp", updateHelp);
+                request.getRequestDispatcher("ServletUsuario?formid=2")
+                    .forward(request, response);
             }
                 
         }

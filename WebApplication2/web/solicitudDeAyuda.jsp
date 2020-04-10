@@ -14,11 +14,11 @@
     <body>
         <h1>Llene el siguiente formulario para pedir ayuda especializada a AVALES</h1>
         <form action="ServletUsuario" method="get">
-            Proyecto de Avales al que se quiere pedir ayuda: Estado Civil: <select id="f_proyecto" name="f_proyecto">
-                                                                           <option value="VALORES">VALORES</option>
-                                                                           <option value="AMARTE">AMARTE</option>
-                                                                           <option value="ESFAMILIA">ESFAMILIA</option>
-                                                                           </select>
+            Proyecto de Avales al que se quiere pedir ayuda: <select id="f_proyecto" name="f_proyecto">
+                                                                <option value="VALORES">VALORES</option>
+                                                                <option value="AMARTE">AMARTE</option>
+                                                                <option value="ESFAMILIA">ESFAMILIA</option>
+                                                                </select>
             <br><br>
             Descripción: <input type="text" name="f_descripcion" required/>
             <br><br>

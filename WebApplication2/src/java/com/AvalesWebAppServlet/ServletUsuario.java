@@ -75,6 +75,34 @@ public class ServletUsuario extends HttpServlet
                         .forward(request, response);
                     }
             }
+            
+            if (stringform.equals("4"))
+            {
+                    String aprobacion = request.getParameter("aprobacion");
+                    String id = request.getParameter("id");
+                    int int_id = Integer.parseInt(id);
+                    String iduser = request.getParameter("iduser");
+                    int int_iduser = Integer.parseInt(iduser);
+                    String proyecto = request.getParameter("proyecto");
+                    String descripcion = request.getParameter("descripcion");
+                    String fecha = request.getParameter("fecha");
+                    
+                    
+                    if(!aprobacion.equals("Aprobado") & !aprobacion.equals("No aprobado"))
+                    {
+                    solicitudAyudaObj ayudaAEditar = new solicitudAyudaObj(int_id, int_iduser, proyecto, descripcion, fecha, aprobacion);
+
+                    request.getSession().setAttribute("ayudaAEditar", ayudaAEditar);
+                    request.getRequestDispatcher("editarSolicitudAyuda.jsp")
+                        .forward(request, response);
+                    
+                    }
+                        else
+                    {
+                        request.getRequestDispatcher("errorBorrarSolicitud.jsp")
+                        .forward(request, response);
+                    }
+            }
                 
         }
             

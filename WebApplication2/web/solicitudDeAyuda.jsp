@@ -20,7 +20,9 @@
                                                                 <option value="ESFAMILIA">ESFAMILIA</option>
                                                                 </select>
             <br><br>
-            Descripción: <input type="text" name="f_descripcion" required/>
+            Descripción:
+            <br><br>
+            <textarea name="f_descripcion" rows="10" cols="40" maxlength="500" required>Escribe aquí tus comentarios</textarea>
             <br><br>
             <input type="submit" value="Create" />
             <input type="hidden" name="formid" value="1" />

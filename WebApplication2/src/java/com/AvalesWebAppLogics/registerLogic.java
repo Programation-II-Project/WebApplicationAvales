@@ -76,6 +76,7 @@ public class registerLogic extends Logic
                  Logger.getLogger(registerLogic.class.getName()).log(Level.SEVERE, null, ex);
              }
          }
+         
          return Info;
     }
 

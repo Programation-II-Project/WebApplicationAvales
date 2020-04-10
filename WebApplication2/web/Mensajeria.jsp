@@ -19,6 +19,7 @@
             <br><br>
             <input type="text" name="fl_newMessage"/>
             <input type="hidden" name="formid" value="100" />
+            <input type="submit" value="Enviar">
         </form>
     </body>
 </html>

@@ -2,10 +2,12 @@
 package com.AvalesWebAppServlet;
 
 import com.AvalesWebAppLogics.ayudaLogic;
+import com.AvalesWebAppLogics.messageLogic;
 import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -102,6 +104,22 @@ public class ServletUsuario extends HttpServlet
                         request.getRequestDispatcher("errorBorrarSolicitud.jsp")
                         .forward(request, response);
                     }
+            }
+            if (stringform.equals("100"))
+            {
+              String s_newMessage = request.getParameter("fl_newMessage");
+              byte adminStatus = 0;
+              
+             nuevoRegistroObj user = 
+                (nuevoRegistroObj)request.getSession().getAttribute("logged_user");
+             
+              messageLogic CnewMessageL = new messageLogic();
+              
+              boolean newMessage = CnewMessageL.insertMessage(user.getId(), 1, s_newMessage, adminStatus);
+              
+              request.getSession().setAttribute("message", newMessage);
+                request.getRequestDispatcher("Mensajeria.jsp")
+                    .forward(request, response);
             }
                 
         }

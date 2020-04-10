@@ -1,7 +1,7 @@
 <%-- 
-    Document   : PerfilDeAdmin
-    Created on : abr 8, 2020, 3:24:27 p.m.
-    Author     : Abel_Yo
+    Document   : errorEditarSolicitud
+    Created on : abr 9, 2020, 7:35:58 p.m.
+    Author     : Abel_
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,8 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hola Administrador, un gusto verte!</h1>
-        <br><br>
-        <a href="ServletAdmin?formid=1">Ver las solicitudes de ayuda</a>
+        <h1>NO PUEDES EDITAR ESTA SOLICITUD YA QUE YA HA SIDO ACEPTADA</h1>
+        <a href="ServletUsuario?formid=2">Back</a>
     </body>
 </html>

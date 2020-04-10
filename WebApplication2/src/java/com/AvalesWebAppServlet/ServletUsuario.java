@@ -71,7 +71,7 @@ public class ServletUsuario extends HttpServlet
                     }
                         else
                     {
-                        request.getRequestDispatcher("errorBorrarSolicitud")
+                        request.getRequestDispatcher("errorBorrarSolicitud.jsp")
                         .forward(request, response);
                     }
             }

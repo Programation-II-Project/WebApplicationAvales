@@ -25,6 +25,6 @@
         <br><br>
         <a href="ServletUsuario?formid=2">Ver tus solicitudes y administrarlas</a>
         <br><br>
-        <a href="index.html">Volver a Avales</a>
+        <a href="index.html">Volver a Avales pronto</a>
     </body>
 </html>

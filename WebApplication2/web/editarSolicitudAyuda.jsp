@@ -25,7 +25,9 @@
                                                                            <option value="ESFAMILIA">ESFAMILIA</option>
                                                                            </select>
             <br><br>
-            Descripción: <input type="text" value="<%= ayudaActual.getDescripcion() %>" name="f_descripcion" required/>
+            Descripción:
+            <br><br>
+            <textarea name="f_descripcion" rows="10" cols="40" required><%= ayudaActual.getDescripcion() %></textarea>
             <br><br>
             <input type="submit" value="Create" />
             <input type="hidden" name="formid" value="5" />

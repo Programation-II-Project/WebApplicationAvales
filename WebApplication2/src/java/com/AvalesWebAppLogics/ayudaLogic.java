@@ -146,4 +146,5 @@ public class ayudaLogic extends Logic
                 + "WHERE idsolicitudAyuda = "+IDsolicitud+";");
         return aprobarHasFailed;
     }
+
 }

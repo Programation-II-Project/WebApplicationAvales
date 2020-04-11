@@ -15,5 +15,9 @@
         <h1>Hola Administrador, un gusto verte!</h1>
         <br><br>
         <a href="ServletAdmin?formid=1">Ver las solicitudes de ayuda</a>
+        <br><br>
+        <a href="ServletAdmin?formid=5">Administrar proyectos</a>
+        <br><br> 
+        <a href="index.html">Volver a Avales</a>
     </body>
 </html>

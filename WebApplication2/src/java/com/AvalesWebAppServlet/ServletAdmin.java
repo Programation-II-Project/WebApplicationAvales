@@ -1,8 +1,10 @@
 package com.AvalesWebAppServlet;
 
 import com.AvalesWebAppLogics.ayudaLogic;
+import com.AvalesWebAppLogics.proyectoLogic;
 import com.AvalesWebAppLogics.registerLogic;
 import com.AvalesWebAppObjs.nuevoRegistroObj;
+import com.AvalesWebAppObjs.proyectoObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
 import java.io.IOException;
 import java.util.List;
@@ -94,6 +96,35 @@ public class ServletAdmin extends HttpServlet {
                         .forward(request, response);
                     
                     
+            }
+        
+        if (stringform.equals("5"))
+            {   
+                proyectoLogic CLogic = new proyectoLogic();
+                
+                List<proyectoObj> listaDeProyectosTotal = CLogic.getAllProyects();
+                
+                request.getSession().setAttribute("listaTotalProyectos", listaDeProyectosTotal);
+                request.getRequestDispatcher("tablaProyectos.jsp")
+                    .forward(request, response);
+            }
+        
+        if (stringform.equals("6"))
+            {   
+                
+                String nombre = request.getParameter("proyecto");
+                String descripcion = request.getParameter("descripcion");
+                String lugar = request.getParameter("lugar");
+                String foto = request.getParameter("foto");
+                String video = request.getParameter("video");
+                
+                proyectoLogic CLogic = new proyectoLogic();
+                
+                boolean insertProyect = CLogic.insertProyect(nombre, descripcion, lugar, foto, video);
+                
+                request.getSession().setAttribute("insertProyect", insertProyect);
+                request.getRequestDispatcher("ServletAdmin?formid=5")
+                    .forward(request, response);
             }
         
     }

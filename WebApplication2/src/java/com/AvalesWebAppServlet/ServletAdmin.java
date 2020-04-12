@@ -127,6 +127,59 @@ public class ServletAdmin extends HttpServlet {
                     .forward(request, response);
             }
         
+        if (stringform.equals("7"))
+            {   
+                
+                
+                String id = request.getParameter("id");
+                int id_proyecto = Integer.parseInt(id);
+                String nombre = request.getParameter("nombre");
+                String descripcion = request.getParameter("descripcion");
+                String lugar = request.getParameter("lugar");
+                String foto = request.getParameter("foto");
+                String video = request.getParameter("video");
+                
+                proyectoObj proyectoAEditar = new proyectoObj(id_proyecto,nombre,descripcion,lugar,foto,video);
+                
+                request.getSession().setAttribute("proyectoAEditar", proyectoAEditar);
+                request.getRequestDispatcher("editarProyecto.jsp")
+                    .forward(request, response);
+            }
+        
+        if (stringform.equals("8"))
+            {   
+                String id = request.getParameter("id");
+                int id_proyecto = Integer.parseInt(id);
+                
+                proyectoLogic CLogic = new proyectoLogic();
+                
+                Boolean delProyect = CLogic.borrarProyecto(id_proyecto);
+                
+                request.getRequestDispatcher("ServletAdmin?formid=5")
+                    .forward(request, response);
+            }
+        
+        if (stringform.equals("9"))
+            {   
+                proyectoObj proyectoAEditar = 
+                            (proyectoObj)request.getSession().getAttribute("proyectoAEditar");
+                
+                String nombre = request.getParameter("nombre");
+                String descripcion = request.getParameter("descripcion");
+                String lugar = request.getParameter("lugar");
+                String foto = request.getParameter("foto");
+                String video = request.getParameter("video");
+                
+                proyectoLogic CLogic = new proyectoLogic();
+                
+                boolean editProyect = CLogic.editProyecto(proyectoAEditar.getID(),nombre,descripcion,lugar,foto,video);
+                
+                request.getSession().setAttribute("editAproved", editProyect);
+                request.getRequestDispatcher("ServletAdmin?formid=5")
+                    .forward(request, response);
+            }
+        
+        
     }
     
 

@@ -115,6 +115,7 @@ public class ServletUsuario extends HttpServlet
                 ayudaLogic CLogic = new ayudaLogic();
                 
                 boolean updateHelp = CLogic.UpdateHelp(ayudaActual.getIdSolicitud(), proyecto, descripcion);
+                
                 request.getSession().setAttribute("updateHelp", updateHelp);
                 request.getRequestDispatcher("ServletUsuario?formid=2")
                     .forward(request, response);

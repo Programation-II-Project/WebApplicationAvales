@@ -45,18 +45,18 @@
                         CTemp = ite.next();
             %>
                     <tr>
-                        <td><a><%= CTemp.getNombreProyecto() %></a></td>
+                        <td><%= CTemp.getNombreProyecto() %></td>
                         <td><%= CTemp.getDescripcion() %></td>
                         <td><%= CTemp.getLugar() %></td>
                         <td><%= CTemp.getFoto() %></td>
                         <td><%= CTemp.getVideo() %></td>
                             <td>
-                                    <a>
+                                    <a href="ServletAdmin?formid=7&id=<%= CTemp.getID() %>&nombre=<%= CTemp.getNombreProyecto() %>&descripcion=<%= CTemp.getDescripcion() %>&lugar=<%= CTemp.getLugar() %>&foto=<%= CTemp.getFoto() %>&video=<%= CTemp.getVideo() %>">
                                         <i class="button">Editar</i>
                                     </a>
                                 </td>
                                 <td>
-                                    <a>
+                                    <a href="ServletAdmin?formid=8&id=<%= CTemp.getID() %>">
                                         <i class="button">Borrar</i>
                                     </a>
                                 </td>        

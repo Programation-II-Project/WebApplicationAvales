@@ -2,6 +2,8 @@
 package com.AvalesWebAppServlet;
 
 import com.AvalesWebAppLogics.ayudaLogic;
+import com.AvalesWebAppLogics.donacionesLogic;
+import com.AvalesWebAppObjs.donacionObj;
 import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
 import java.io.IOException;
@@ -120,7 +122,49 @@ public class ServletUsuario extends HttpServlet
                 request.getRequestDispatcher("ServletUsuario?formid=2")
                     .forward(request, response);
             }
+            
+            if (stringform.equals("6"))
+            {
                 
+                nuevoRegistroObj user = 
+                                        (nuevoRegistroObj)request.getSession().getAttribute("logged_user");
+                
+                donacionesLogic CLogic = new donacionesLogic();
+                
+                List<donacionObj> listaDeDonaciones = CLogic.getAllDonationsByUserID(user.getId());
+                
+                request.getSession().setAttribute("DonacionesByID", listaDeDonaciones);
+                request.getRequestDispatcher("listaDonacionesUsuario.jsp")
+                    .forward(request, response);
+            }
+            
+            
+            if (stringform.equals("7")) 
+            {
+                
+            String s_Tarjeta = request.getParameter("Tarjeta");
+            String s_CVV = request.getParameter("CVV");
+            String s_Mes = request.getParameter("Mes");
+            String s_Anno = request.getParameter("Anno");
+            String s_Donacion = request.getParameter("Donacion");
+            
+            int Tarjeta = Integer.parseInt(s_Tarjeta);
+            int CVV = Integer.parseInt(s_CVV);
+            int Mes = Integer.parseInt(s_Mes);
+            int Anno = Integer.parseInt(s_Anno);
+            double Donacion = Double.parseDouble(s_Donacion);
+            
+            nuevoRegistroObj user = 
+                (nuevoRegistroObj)request.getSession().getAttribute("logged_user");
+            
+            donacionesLogic CLogic = new donacionesLogic();
+            boolean nuevaDonacion = CLogic.InsertDonation(user.getId(),Tarjeta,CVV,Mes,Anno,Donacion);
+                
+            request.getSession().setAttribute("nuevaDonacion", nuevaDonacion);
+            request.getRequestDispatcher("ServletUsuario?formid=6")
+                .forward(request, response);
+            
+            }
         }
             
         

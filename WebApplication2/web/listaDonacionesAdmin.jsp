@@ -1,33 +1,30 @@
 <%-- 
-    Document   : listaDonacionesUsuario
-    Created on : abr 12, 2020, 7:25:08 p.m.
+    Document   : listaDonacionesAdmin
+    Created on : abr 17, 2020, 2:59:14 p.m.
     Author     : Abel_
 --%>
 
 <%@page import="java.util.Iterator"%>
-<%@page import="com.AvalesWebAppObjs.donacionObj"%>
 <%@page import="java.util.List"%>
+<%@page import="com.AvalesWebAppObjs.donacionObj"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Tus donaciones</title>
-        <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
-        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+        <title>JSP Page</title>
     </head>
     <%
         List<donacionObj> listaDeDonaciones = 
-                (List<donacionObj>)request.getSession().getAttribute("DonacionesByID");
+                (List<donacionObj>)request.getSession().getAttribute("DonacionesTotales");
         int TotalDonado = 0;
     %>
     <body>
         <h1>Donaciones</h1>
         <br><br>
-        <a href="nuevaDonacion.jsp" >Hacer una nueva donacion</a>
-        <br><br> 
-         <table style="width:50%" border="1">
+         <table style="width:50%" border="3">
             <tr>
+                <th>Usuario</th>
                 <th>Fecha</th>
                 <th>Tarjeta</th>
                 <th>Monto</th>
@@ -51,6 +48,8 @@
                         }
             %>
                     <tr>
+                    
+                        <td><a href="ServletAdmin?formid=4&id=<%= CTemp.getID_donante() %>" ><%= CTemp.getID_donante() %></a></td>
                         <td><%= CTemp.getFecha() %></td>
                         <td><%= CTemp.getTarjeta() %></td>
                         <td><%= CTemp.getDonacion() %></td>
@@ -64,18 +63,18 @@
                 else
                 {
             %>
-                        <td>No se ha tramitado</td>
+                        <td>En espera de confirmación</td>
             <%
                 }
             %>
                             <td>
-                                    <a href="ServletUsuario?formid=8&id=<%= CTemp.getID_donacion() %>&aprobacion=<%= CTemp.getEstado() %>&tarjeta=<%= CTemp.getTarjeta() %>&CVV=<%= CTemp.getCVV() %>&anno=<%= CTemp.getAño() %>&mes=<%= CTemp.getMes() %>&monto=<%= CTemp.getDonacion() %>" >
-                                        <i class="button">Editar</i>
+                                    <a href="ServletAdmin?formid=11&id=<%= CTemp.getID_donacion() %>&aprobacion=<%= CTemp.getEstado() %>" >
+                                        <i class="button">Aceptada</i>
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="ServletUsuario?formid=10&id=<%= CTemp.getID_donacion() %>&aprobacion=<%= CTemp.getEstado() %>">
-                                        <i class="button">Borrar</i>
+                                    <a href="ServletAdmin?formid=12&id=<%= CTemp.getID_donacion() %>&aprobacion=<%= CTemp.getEstado() %>" >
+                                        <i class="button">Denegada</i>
                                     </a>
                                 </td>        
                     </tr>
@@ -85,8 +84,8 @@
             %>
         </table>
         <br><br>
-        <a>Total donado: $<%= TotalDonado %></a>
+        <a>Total donado a AVALES por todos los usuarios: $<%= TotalDonado %></a>
         <br><br>
-        <a href="perfil.jsp">Back</a>
+        <a href="PerfilDeAdmin.jsp">Back</a>
     </body>
 </html>

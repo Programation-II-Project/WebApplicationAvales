@@ -1,8 +1,10 @@
 package com.AvalesWebAppServlet;
 
 import com.AvalesWebAppLogics.ayudaLogic;
+import com.AvalesWebAppLogics.donacionesLogic;
 import com.AvalesWebAppLogics.proyectoLogic;
 import com.AvalesWebAppLogics.registerLogic;
+import com.AvalesWebAppObjs.donacionObj;
 import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.proyectoObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
@@ -152,8 +154,7 @@ public class ServletAdmin extends HttpServlet {
                 int id_proyecto = Integer.parseInt(id);
                 
                 proyectoLogic CLogic = new proyectoLogic();
-                
-                Boolean delProyect = CLogic.borrarProyecto(id_proyecto);
+                CLogic.borrarProyecto(id_proyecto);
                 
                 request.getRequestDispatcher("ServletAdmin?formid=5")
                     .forward(request, response);
@@ -179,7 +180,61 @@ public class ServletAdmin extends HttpServlet {
                     .forward(request, response);
             }
         
+        if (stringform.equals("10"))
+            {   
+                donacionesLogic CLogic = new donacionesLogic();
+                List<donacionObj> TotalDeDonaciones = CLogic.getAllDonations();
+                
+                request.getSession().setAttribute("DonacionesTotales", TotalDeDonaciones);
+                request.getRequestDispatcher("listaDonacionesAdmin.jsp")
+                    .forward(request, response);
+            }
         
+        if (stringform.equals("11"))
+            {
+                    String aprobacion = request.getParameter("aprobacion");
+                    String ID = request.getParameter("id");
+                    int IDsolicitud = Integer.parseInt(ID);
+                    
+                    
+                    if(!aprobacion.equals("Aprobado") & !aprobacion.equals("Denegado"))
+                    {
+                    donacionesLogic CLogic = new donacionesLogic();
+                    CLogic.aprobarDonacion(IDsolicitud);
+
+                    request.getRequestDispatcher("ServletAdmin?formid=10")
+                        .forward(request, response);
+                    
+                    }
+                        else
+                    {
+                        request.getRequestDispatcher("noConfirmarDonacion.jsp")
+                        .forward(request, response);
+                    }
+            }
+        
+        if (stringform.equals("12"))
+            {
+                    String aprobacion = request.getParameter("aprobacion");
+                    String ID = request.getParameter("id");
+                    int IDsolicitud = Integer.parseInt(ID);
+                    
+                    
+                    if(!aprobacion.equals("Aprobado") & !aprobacion.equals("Denegado"))
+                    {
+                    donacionesLogic CLogic = new donacionesLogic();
+                    CLogic.denegarDonacion(IDsolicitud);
+
+                    request.getRequestDispatcher("ServletAdmin?formid=10")
+                        .forward(request, response);
+                    
+                    }
+                        else
+                    {
+                        request.getRequestDispatcher("noConfirmarDonacion.jsp")
+                        .forward(request, response);
+                    }
+            }
     }
     
 

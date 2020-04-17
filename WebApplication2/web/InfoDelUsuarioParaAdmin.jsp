@@ -178,7 +178,7 @@
         
         
         <br><br>
-        <a href="ServletAdmin?formid=1" >Back</a>
+        <a href="PerfilDeAdmin.jsp" >Back to profile</a>
         
         
     </body>

@@ -19,7 +19,7 @@
     <body>
         <h1>Editar proyecto</h1>
         <form action="ServletAdmin" method="get">
-            Nombre proyecto: <input type="text" name="nombre" value="<%= proyectoAEditar.getNombreProyecto() %>" required>
+            Nombre proyecto: <input type="text" name="nombre" value="<%= proyectoAEditar.getNombreProyecto() %>" required/>
             <br><br>
             Descripción:
             <br><br>

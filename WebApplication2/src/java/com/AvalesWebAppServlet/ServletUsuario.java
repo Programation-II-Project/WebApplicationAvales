@@ -152,7 +152,7 @@ public class ServletUsuario extends HttpServlet
             int CVV = Integer.parseInt(s_CVV);
             int Mes = Integer.parseInt(s_Mes);
             int Anno = Integer.parseInt(s_Anno);
-            double Donacion = Double.parseDouble(s_Donacion);
+            int Donacion = Integer.parseInt(s_Donacion);
             
             nuevoRegistroObj user = 
                 (nuevoRegistroObj)request.getSession().getAttribute("logged_user");
@@ -165,10 +165,100 @@ public class ServletUsuario extends HttpServlet
                 .forward(request, response);
             
             }
+            
+            
+            if (stringform.equals("8")) 
+            {
+                
+            String estado_donacion = request.getParameter("aprobacion");
+            
+            if(!estado_donacion.equals("Aprobado") & !estado_donacion.equals("Denegado"))
+                {
+                    String id_donacion = request.getParameter("id");
+                    String tarjeta = request.getParameter("tarjeta");
+                    String CVV = request.getParameter("CVV");
+                    String anno = request.getParameter("anno");
+                    String mes = request.getParameter("mes");
+                    String monto = request.getParameter("monto");
+                    
+
+                    int Tarjeta = Integer.parseInt(tarjeta);
+                    int int_CVV = Integer.parseInt(CVV);
+                    int Mes = Integer.parseInt(mes);
+                    int Anno = Integer.parseInt(anno);
+                    int Donacion = Integer.parseInt(monto);
+                    int id = Integer.parseInt(id_donacion);
+                    
+                    nuevoRegistroObj user = 
+                                            (nuevoRegistroObj)request.getSession().getAttribute("logged_user");
+                    
+                    donacionObj DonacionAEditar = new donacionObj(id,user.getId(),Tarjeta,int_CVV,Mes,Anno,Donacion,null,estado_donacion);
+                    
+                    request.getSession().setAttribute("DonacionAEditar", DonacionAEditar);
+                    request.getRequestDispatcher("editDonation.jsp")
+                        .forward(request, response);
+                }
+            else
+                {
+                    request.getRequestDispatcher("errorEditarDonacion.jsp")
+                    .forward(request, response);
+                }
+            }
+            
+            
+            if (stringform.equals("9")) 
+            {
+
+            String tarjeta = request.getParameter("tarjeta");
+            String CVV = request.getParameter("CVV");
+            String anno = request.getParameter("Anno");
+            String mes = request.getParameter("Mes");
+            String monto = request.getParameter("donation");
+            
+            int Tarjeta = Integer.parseInt(tarjeta);
+            int int_CVV = Integer.parseInt(CVV);
+            int Mes = Integer.parseInt(mes);
+            int Anno = Integer.parseInt(anno);
+            int Donacion = Integer.parseInt(monto);
+            
+            
+            donacionObj donation = 
+                                    (donacionObj)request.getSession().getAttribute("DonacionAEditar");
+            
+            donacionesLogic CLogic = new donacionesLogic();
+            CLogic.EditDonation(donation.getID_donacion(),Tarjeta,int_CVV,Mes,Anno,Donacion);
+            
+            request.getRequestDispatcher("ServletUsuario?formid=6")
+                    .forward(request, response);
+            }
+            
+            
+            if (stringform.equals("10")) 
+            {
+                
+            String estado_donacion = request.getParameter("aprobacion");
+            
+            if(!estado_donacion.equals("Aprobado") & !estado_donacion.equals("Denegado"))
+                {
+                    String id_donacion = request.getParameter("id");
+                    int id = Integer.parseInt(id_donacion);
+                    
+                    donacionesLogic CLogic = new donacionesLogic();
+                    CLogic.DeleteDonation(id);
+                    
+                    request.getRequestDispatcher("ServletUsuario?formid=6")
+                        .forward(request, response);
+                }
+            else
+                {
+                    request.getRequestDispatcher("errorEditarDonacion.jsp")
+                    .forward(request, response);
+                }
+            }
+            
+            
         }
             
-        
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

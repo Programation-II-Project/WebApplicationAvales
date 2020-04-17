@@ -102,14 +102,12 @@ public class proyectoLogic extends Logic
          return pro;
     }
 
-    public Boolean borrarProyecto(int id_proyecto) 
+    public void borrarProyecto(int id_proyecto) 
     {
-    boolean delete;
     DatabaseX database = getDatabase();
-    delete = database.executeNonQueryBool("DELETE "
+    database.executeNonQueryBool("DELETE "
             + "FROM proyecto.proyectos "
             + "WHERE IDproyecto="+id_proyecto+";"); 
-    return delete;
     }
 
     public Boolean editProyecto(int id_proyecto, String nombre, String descripcion, String lugar, String foto, String video) 

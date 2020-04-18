@@ -56,6 +56,20 @@ public class ServletMainPage extends HttpServlet {
                 request.getRequestDispatcher("Calendario.jsp")
                     .forward(request, response);
             }
+        
+        if (stringform.equals("4"))
+            {   
+                String id = request.getParameter("id");
+                int id_proyecto = Integer.parseInt(id);
+                
+                actividadLogic CLogic = new actividadLogic();
+                
+                actividadObj actividadAVer = CLogic.getActividadByID(id_proyecto);
+                
+                request.getSession().setAttribute("actividadAVer", actividadAVer);
+                request.getRequestDispatcher("ActividadesAvales.jsp")
+                    .forward(request, response);
+            }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

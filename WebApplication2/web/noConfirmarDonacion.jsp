@@ -13,6 +13,12 @@
     </head>
     <body>
         <h1>Ya se ha tomado una decision</h1>
-        <a href="ServletAdmin?formid=10">Back</a>
+        <br><br>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
 </html>

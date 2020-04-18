@@ -28,6 +28,11 @@
             <input type="hidden" name="formid" value="1" />
         </form>
         <br><br>
-        <a href="perfil.jsp">Back</a>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
 </html>

@@ -13,6 +13,12 @@
     </head>
     <body>
         <h1>Ya se ha tomado una decision, no se puede aprobar o desaprobar</h1>
-        <a href="ServletAdmin?formid=1">back</a>
+        <br><br>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
 </html>

@@ -32,5 +32,11 @@
             <input type="submit" value="Create" />
             <input type="hidden" name="formid" value="5" />
         </form>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script> 
     </body>
 </html>

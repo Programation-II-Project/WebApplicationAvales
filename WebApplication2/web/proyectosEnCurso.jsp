@@ -34,5 +34,14 @@
                     }
                 }
             %>
+            <br><br>
+            
+            <button onclick="goBack()">Back</button>
+            <script>
+            function goBack() {
+            window.history.back();
+            }
+            </script>
     </body>
+    
 </html>

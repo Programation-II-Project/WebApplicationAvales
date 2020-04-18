@@ -14,6 +14,11 @@
     <body>
         <h1>No se puede editar o borrar esta solicitud ya que ya se ha tomado una decisión al respecto</h1>
         <br><br>
-        <a href="ServletUsuario?formid=6" >BACK</a>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
 </html>

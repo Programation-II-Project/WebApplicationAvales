@@ -19,9 +19,9 @@
                 (List<actividadObj>)request.getSession().getAttribute("listaDeActividadesTotal");
     %>
     <body>
-        <h1>Proyectos</h1><br><br>
+        <h1>Actividades</h1><br><br>
         <br><br>
-        <a href="nuevoProyecto.jsp" >Crear un nuevo proyecto</a>
+        <a href="nuevaActividad.jsp" >Crear una nueva actividad</a>
         <br><br> 
          <table style="width:50%" border="1">
             <tr>
@@ -55,12 +55,12 @@
                         <td><%= CTemp.getDia() %></td>
                         <td><%= CTemp.getFoto() %></td>
                             <td>
-                                    <a href="ServletAdmin?formid=7&id=<%= CTemp.getId_Actividad() %>&nombre=<%= CTemp.getNombre() %>&descripcion=<%= CTemp.getDescripcion() %>&costo=<%= CTemp.getCosto() %>&foto=<%= CTemp.getFoto() %>&encargado=<%= CTemp.getEncargado() %>&Anno=<%= CTemp.getAnno() %>&Mes=<%= CTemp.getMes() %>&Dia=<%= CTemp.getDia() %>">
+                                    <a href="ServletAdmin?formid=16&id=<%= CTemp.getId_Actividad() %>&nombre=<%= CTemp.getNombre() %>&descripcion=<%= CTemp.getDescripcion() %>&costo=<%= CTemp.getCosto() %>&foto=<%= CTemp.getFoto() %>&encargado=<%= CTemp.getEncargado() %>&anno=<%= CTemp.getAnno() %>&mes=<%= CTemp.getMes() %>&dia=<%= CTemp.getDia() %>">
                                         <i class="button">Editar</i>
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="ServletAdmin?formid=8&id=<%= CTemp.getId_Actividad() %>">
+                                    <a href="ServletAdmin?formid=15&id=<%= CTemp.getId_Actividad() %>&anno=<%= CTemp.getAnno() %>&mes=<%= CTemp.getMes() %>&dia=<%= CTemp.getDia() %>">
                                         <i class="button">Borrar</i>
                                     </a>
                                 </td>        
@@ -70,5 +70,7 @@
                 }
             %>
         </table>
+        <br><br>
+        <a href="PerfilDeAdmin.jsp" >Back</a>
     </body>
 </html>

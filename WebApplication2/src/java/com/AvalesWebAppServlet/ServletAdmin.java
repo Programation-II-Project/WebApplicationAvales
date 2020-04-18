@@ -11,6 +11,7 @@ import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.proyectoObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -240,13 +241,172 @@ public class ServletAdmin extends HttpServlet {
         
         if (stringform.equals("13"))
             {   
-                actividadLogic CLogic = new actividadLogic();
+                    actividadLogic CLogic = new actividadLogic();
+
+                    List<actividadObj> listaDeActividadesTotal = CLogic.getAllActivities();
+
+                    request.getSession().setAttribute("listaDeActividadesTotal", listaDeActividadesTotal);
+                    request.getRequestDispatcher("tablaActividades.jsp")
+                        .forward(request, response);
+            }
+        
+        if (stringform.equals("14"))
+            {   
                 
-                List<actividadObj> listaDeActividadesTotal = CLogic.getAllActivities();
+                    String nombre = request.getParameter("Nombre");
+                    String descripcion = request.getParameter("Descripcion");
+                    String encargado = request.getParameter("Encargado");
+                    String costo = request.getParameter("Costo");
+                    String anno = request.getParameter("Anno");
+                    String mes = request.getParameter("Mes");
+                    String dia = request.getParameter("Dia");
+                    String banner = request.getParameter("Banner");
+
+                    int se_anno = Integer.parseInt(anno);
+                    int se_mes = Integer.parseInt(mes);
+                    int se_dia = Integer.parseInt(dia);
+
+                    Calendar cal= Calendar.getInstance();
+                    int year = cal.get(Calendar.YEAR);
+                    int month = cal.get(Calendar.MONTH) + 1;
+                    int day = cal.get(Calendar.DAY_OF_MONTH);
+
+
+                    if(((se_anno>=year) & (se_mes>=month) & (se_dia>day)) || (se_anno>year) || (se_anno>=year) & (se_mes>month))
+                    {
+                        actividadLogic CLogic = new actividadLogic();
+                        CLogic.insertActivity(nombre, descripcion, encargado, costo, se_anno, se_mes, se_dia, banner);
+
+                        request.getRequestDispatcher("ServletAdmin?formid=13")
+                            .forward(request, response);
+                    }
+                    else
+                    {
+                        request.getRequestDispatcher("noEditarActividad.jsp")
+                            .forward(request, response);
+                    }
+
+
+            }
+        
+        if (stringform.equals("15"))
+            {
+                    String ID = request.getParameter("id");
+                    String anno = request.getParameter("anno");
+                    String mes = request.getParameter("mes");
+                    String dia = request.getParameter("dia");
+                    
+                    int IDsolicitud = Integer.parseInt(ID);
+                    int se_anno = Integer.parseInt(anno);
+                    int se_mes = Integer.parseInt(mes);
+                    int se_dia = Integer.parseInt(dia);
+                    
+                    Calendar cal= Calendar.getInstance();
+                    int year = cal.get(Calendar.YEAR);
+                    int month = cal.get(Calendar.MONTH) + 1;
+                    int day = cal.get(Calendar.DAY_OF_MONTH);
+                    
+                    
+                    if(((se_anno>=year) & (se_mes>=month) & (se_dia>day)) || (se_anno>year) || (se_anno>=year) & (se_mes>month))
+                    {
+                        actividadLogic CLogic = new actividadLogic();
+                        CLogic.borrarActividad(IDsolicitud);
+                        
+                        request.getRequestDispatcher("ServletAdmin?formid=13")
+                            .forward(request, response);
+                    
+                    }
+                    else
+                    {
+                        request.getRequestDispatcher("noEditarActividad.jsp")
+                        .forward(request, response);
+                    }
+            }
+        
+        if (stringform.equals("16"))
+            {
+                    String anno = request.getParameter("anno");
+                    String mes = request.getParameter("mes");
+                    String dia = request.getParameter("dia");
+                    
+                    int se_anno = Integer.parseInt(anno);
+                    int se_mes = Integer.parseInt(mes);
+                    int se_dia = Integer.parseInt(dia);
+                    
+                    Calendar cal= Calendar.getInstance();
+                    int year = cal.get(Calendar.YEAR);
+                    int month = cal.get(Calendar.MONTH) + 1;
+                    int day = cal.get(Calendar.DAY_OF_MONTH);
+                    
+                    
+                    if(((se_anno>=year) & (se_mes>=month) & (se_dia>day)) || (se_anno>year) || (se_anno>=year) & (se_mes>month))
+                    {
+                        String id_actividad = request.getParameter("id");
+                        String nombre = request.getParameter("nombre");
+                        String descripcion = request.getParameter("descripcion");
+                        String costo = request.getParameter("costo");
+                        String foto = request.getParameter("foto");
+                        String encargado = request.getParameter("encargado");
+
+                        int IDsolicitud = Integer.parseInt(id_actividad);
+                        double p_costo = Double.parseDouble(costo);
+                        
+                        actividadObj actividadEditar = new actividadObj(IDsolicitud, nombre, descripcion, p_costo, encargado, se_anno, se_mes, se_dia, foto);
+                       
+                        request.getSession().setAttribute("actividadEditar", actividadEditar);
+                        request.getRequestDispatcher("editarActividad.jsp")
+                            .forward(request, response);
+                    
+                    }
+                    else
+                    {
+                        request.getRequestDispatcher("noEditarActividad.jsp")
+                        .forward(request, response);
+                    }
+            }
+        
+        if (stringform.equals("17"))
+            {   
+               
                 
-                request.getSession().setAttribute("listaDeActividadesTotal", listaDeActividadesTotal);
-                request.getRequestDispatcher("tablaActividades.jsp")
+                
+                String anno = request.getParameter("Anno");
+                String mes = request.getParameter("Mes");
+                String dia = request.getParameter("Dia");
+                
+                int se_anno = Integer.parseInt(anno);
+                int se_mes = Integer.parseInt(mes);
+                int se_dia = Integer.parseInt(dia);
+                
+                Calendar cal= Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH) + 1;
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+                
+                if(((se_anno>=year) & (se_mes>=month) & (se_dia>day)) || (se_anno>year) || (se_anno>=year) & (se_mes>month))
+                {
+                    actividadObj actividadEditar = 
+                                            (actividadObj)request.getSession().getAttribute("actividadEditar");
+                    
+                    String nombre = request.getParameter("Nombre");
+                    String descripcion = request.getParameter("Descripcion");
+                    String encargado = request.getParameter("Encargado");
+                    String costo = request.getParameter("Costo");
+                    String banner = request.getParameter("Banner");
+                
+                    double se_costo = Double.parseDouble(costo);
+                
+                    actividadLogic CLogic = new actividadLogic();
+                    CLogic.editActivity(actividadEditar.getId_Actividad(),nombre,descripcion,encargado, se_costo, se_anno, se_mes, se_dia, banner);
+
+                    request.getRequestDispatcher("ServletAdmin?formid=13")
+                        .forward(request, response);
+                }
+                else
+                {
+                    request.getRequestDispatcher("noEditarActividad.jsp")
                     .forward(request, response);
+                }
             }
     }
     

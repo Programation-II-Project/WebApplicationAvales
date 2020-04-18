@@ -66,5 +66,7 @@
                 }
             %>
         </table>
+        <br><br>
+        <a href="PerfilDeAdmin.jsp" >Back</a>
     </body>
 </html>

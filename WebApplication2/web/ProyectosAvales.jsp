@@ -26,7 +26,20 @@
     %>
     <body>
         <h1><%= proyecto.getNombreProyecto() %></h1>
+        <br><br>
         <video src="<%= ruta_video %>" width=620  height=540 autoplay loop ></video>
         <image src="<%= ruta_foto %>" />
+        <br><br>
+        <h2><%= proyecto.getDescripcion() %></h2>
+        <br><br>
+        <h2><%= proyecto.getLugar() %></h2>
+        <br><br>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
+    
 </html>

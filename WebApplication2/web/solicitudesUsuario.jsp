@@ -76,7 +76,12 @@
                 }
             %>
         </table>
-        <br><br> 
-        <a href="perfil.jsp">Back</a>
+        <br><br>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
 </html>

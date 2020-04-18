@@ -35,5 +35,11 @@
             <input type="submit" value="Edit" />
             <input type="hidden" name="formid" value="9" />
         </form>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
 </html>

@@ -15,7 +15,7 @@ var Calendar = function(model, options, date){
     DateTimeFormat: 'mmm, yyyy',
     DatetimeLocation: '',
     EventClick: '',
-    EventTargetWholeDay: false,
+    EventTargetWholeDay: true,
     DisabledDays: [],
     ModelChange: model
   };
@@ -239,7 +239,7 @@ function createCalendar(calendar, element, adjuster){
             }
             title.appendChild(a);
           }else{
-            title.innerHTML += '<a href="' + calendar.Model[n].Link + '">' + calendar.Model[n].Title + '</a>';
+            title.innerHTML += '<a>' + calendar.Model[n].Title + '</a>';
           }
           number.appendChild(title);
         }

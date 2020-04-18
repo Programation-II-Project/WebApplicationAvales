@@ -86,6 +86,11 @@
         <br><br>
         <a>Total donado a AVALES por todos los usuarios: $<%= TotalDonado %></a>
         <br><br>
-        <a href="PerfilDeAdmin.jsp">Back</a>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
 </html>

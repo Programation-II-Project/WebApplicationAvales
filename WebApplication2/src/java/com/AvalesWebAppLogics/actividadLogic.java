@@ -58,5 +58,77 @@ public class actividadLogic extends Logic
         }
         return totalActividades; 
     }
+
+    public void insertActivity(String p_nombre, String p_descripcion, String p_encargado, String p_costo, int p_anno, int p_mes, int p_dia, String p_banner) 
+    {
+    DatabaseX database = getDatabase();
+    database.executeNonQueryBool("INSERT INTO proyecto.actividades"
+        + "(IDactividad, Nombre, Descripcion, Costo, Encargado, Año, Mes, Dia, Foto) "
+        + "VALUES(0,'"+p_nombre+"','"+p_descripcion+"', '"+p_costo+"', '"+p_encargado+"', "+p_anno+", "+p_mes+", "+p_dia+", '"+p_banner+"');"); 
+    }
+
+    public void borrarActividad(int IDsolicitud) 
+    {
+    DatabaseX database = getDatabase();
+    database.executeNonQueryBool("DELETE "
+            + "FROM proyecto.actividades "
+            + "WHERE IDactividad="+IDsolicitud+";"); 
+    }
+
+    public void editActivity(int id_Actividad, String nombre, String descripcion, String encargado, double costo, int anno, int mes, int dia, String banner) 
+    {
+        DatabaseX database = getDatabase();
+        database.executeNonQueryBool("UPDATE proyecto.actividades "
+                + "SET Nombre = '"+nombre+"',Descripcion = '"+descripcion+"',Costo = "+costo+",Encargado= '"+encargado+"',Año = "+anno+",Mes = "+mes+",Dia = "+dia+","
+                + "Foto = '"+banner+"' "
+                + "WHERE IDactividad = "+id_Actividad+";");
+    }
+
+    public actividadObj getActividadByID(int actividad) 
+    {
+         actividadObj act = null;
+         DatabaseX database = getDatabase();
+         ResultSet CResult = database.executeQuery("SELECT * FROM proyecto.actividades WHERE IDactividad = "+actividad+";");
+         
+         if(CResult!=null)
+         {
+             try {
+                 
+                int id;
+                String nombre;
+                String descripcion;
+                double costo;
+                String encargado;
+                int anno;
+                int mes;
+                int dia;
+                String foto;
+                
+                
+                while(CResult.next())
+                {
+                id = CResult.getInt("IDactividad");
+                nombre = CResult.getString("Nombre");
+                descripcion = CResult.getString("Descripcion");
+                costo = CResult.getDouble("Costo");
+                encargado = CResult.getString("Encargado");
+                anno = CResult.getInt("Año");
+                mes = CResult.getInt("Mes");
+                dia = CResult.getInt("Dia");
+                foto = CResult.getString("Foto");
+                
+                act = new actividadObj(id, nombre, descripcion, costo, encargado, anno, mes, dia, foto);
+                
+                }
+             } 
+             catch (SQLException ex) 
+             {
+                 Logger.getLogger(registerLogic.class.getName()).log(Level.SEVERE, null, ex);
+             }
+         }
+         
+         return act;
+    }
+
     
 }

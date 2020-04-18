@@ -42,7 +42,7 @@ List<actividadObj> totalActividades =
                         Titulo = CTemp.getNombre();
 
                 %>
-                {'Date': new Date(<%= anno %>, <%= mes %>, <%= dia %>), 'Title': '<%= Titulo %>'},
+                {'Date': new Date(<%= anno %>, <%= mes %>, <%= dia %>), 'Title': '<%= Titulo %> -Costo: <%= CTemp.getCosto() %>'},
                 <%
                     }
                 }
@@ -56,5 +56,14 @@ List<actividadObj> totalActividades =
             caleandar(element, events, settings);
         </script>
     </div>
+  <br><br>
+  <a href="CalendarizacionTabla.jsp" >Ver la calendarización completa</a>          
+  <br><br>
+  <button onclick="goBack()">Back</button>
+  <script>
+  function goBack() {
+  window.history.back();
+  }
+  </script>
   </body>
 </html>

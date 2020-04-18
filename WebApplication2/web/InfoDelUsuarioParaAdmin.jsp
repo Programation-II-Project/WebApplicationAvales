@@ -178,7 +178,12 @@
         
         
         <br><br>
-        <a href="PerfilDeAdmin.jsp" >Back to profile</a>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
         
         
     </body>

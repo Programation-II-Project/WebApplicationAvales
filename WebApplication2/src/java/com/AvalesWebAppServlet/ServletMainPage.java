@@ -1,7 +1,9 @@
 
 package com.AvalesWebAppServlet;
 
+import com.AvalesWebAppLogics.actividadLogic;
 import com.AvalesWebAppLogics.proyectoLogic;
+import com.AvalesWebAppObjs.actividadObj;
 import com.AvalesWebAppObjs.proyectoObj;
 import java.io.IOException;
 import java.util.List;
@@ -41,6 +43,31 @@ public class ServletMainPage extends HttpServlet {
                 
                 request.getSession().setAttribute("proyectoAVer", proyectoAVer);
                 request.getRequestDispatcher("ProyectosAvales.jsp")
+                    .forward(request, response);
+            }
+        
+        if (stringform.equals("3"))
+            {   
+                actividadLogic CLogic = new actividadLogic();
+                
+                List<actividadObj> listaDeActividadesTotal = CLogic.getAllActivities();
+                
+                request.getSession().setAttribute("listaDeActividadesTotal", listaDeActividadesTotal);
+                request.getRequestDispatcher("Calendario.jsp")
+                    .forward(request, response);
+            }
+        
+        if (stringform.equals("4"))
+            {   
+                String id = request.getParameter("id");
+                int id_proyecto = Integer.parseInt(id);
+                
+                actividadLogic CLogic = new actividadLogic();
+                
+                actividadObj actividadAVer = CLogic.getActividadByID(id_proyecto);
+                
+                request.getSession().setAttribute("actividadAVer", actividadAVer);
+                request.getRequestDispatcher("ActividadesAvales.jsp")
                     .forward(request, response);
             }
     }

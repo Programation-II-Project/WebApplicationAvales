@@ -178,7 +178,12 @@
         
         
         <br><br>
-        <a href="ServletAdmin?formid=1" >Back</a>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
         
         
     </body>

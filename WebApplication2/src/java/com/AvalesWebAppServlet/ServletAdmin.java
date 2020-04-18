@@ -1,9 +1,11 @@
 package com.AvalesWebAppServlet;
 
+import com.AvalesWebAppLogics.actividadLogic;
 import com.AvalesWebAppLogics.ayudaLogic;
 import com.AvalesWebAppLogics.donacionesLogic;
 import com.AvalesWebAppLogics.proyectoLogic;
 import com.AvalesWebAppLogics.registerLogic;
+import com.AvalesWebAppObjs.actividadObj;
 import com.AvalesWebAppObjs.donacionObj;
 import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.proyectoObj;
@@ -234,6 +236,17 @@ public class ServletAdmin extends HttpServlet {
                         request.getRequestDispatcher("noConfirmarDonacion.jsp")
                         .forward(request, response);
                     }
+            }
+        
+        if (stringform.equals("13"))
+            {   
+                actividadLogic CLogic = new actividadLogic();
+                
+                List<actividadObj> listaDeActividadesTotal = CLogic.getAllActivities();
+                
+                request.getSession().setAttribute("listaDeActividadesTotal", listaDeActividadesTotal);
+                request.getRequestDispatcher("tablaActividades.jsp")
+                    .forward(request, response);
             }
     }
     

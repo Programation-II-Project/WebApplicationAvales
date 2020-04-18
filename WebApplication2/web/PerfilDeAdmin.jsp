@@ -18,6 +18,8 @@
         <br><br>
         <a href="ServletAdmin?formid=5">Administrar proyectos</a>
         <br><br>
+        <a href="ServletAdmin?formid=13" >Administrar calendarización de actividades</a>
+        <br><br>
         <a href="ServletAdmin?formid=10">Ver donaciones</a>
         <br><br> 
         <a href="index.html">Volver a Avales</a>

@@ -1,3 +1,6 @@
+<%@page import="java.util.Iterator"%>
+<%@page import="com.AvalesWebAppObjs.actividadObj"%>
+<%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,10 +10,16 @@
     <link rel="stylesheet" href="styles/calendar/theme1.css"/>
   </head>
   <% 
-  int dia = 19;
-  int mes = 3;
-  int anno = 2020;
-  String Titulo = "Aniversario con mi amorcito Adriana";
+      
+      
+      
+List<actividadObj> totalActividades = 
+                (List<actividadObj>)request.getSession().getAttribute("listaDeActividadesTotal");
+    
+  int dia = 0;
+  int mes = 0;
+  int anno = 0;
+  String Titulo = "Naniiiiii!";
   %>
   <body>
     <h1>Calendarización AVALES</h1>
@@ -19,8 +28,29 @@
         <script type="text/javascript" src="styles/calendar/caleandar.js"></script>
         <script type="text/javascript">
             var events = [
-                {'Date': new Date(<%= anno %>, <%= mes %>, <%= dia %>), 'Title': '<%= Titulo %>'}
+                <% 
+                if(totalActividades!=null)
+                {
+                    Iterator<actividadObj> ite = totalActividades.iterator();
+                    actividadObj CTemp;
+                    while(ite.hasNext())
+                    {
+                        CTemp = ite.next();
+                        dia = CTemp.getDia();
+                        mes = CTemp.getMes()-1;
+                        anno = CTemp.getAnno();
+                        Titulo = CTemp.getNombre();
+
+                %>
+                {'Date': new Date(<%= anno %>, <%= mes %>, <%= dia %>), 'Title': '<%= Titulo %>'},
+                <%
+                    }
+                }
+                %>
             ];
+        </script>
+        
+        <script type="text/javascript">
             var settings = {};
             var element = document.getElementById('caleandar');
             caleandar(element, events, settings);

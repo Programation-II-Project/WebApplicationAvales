@@ -1,7 +1,9 @@
 
 package com.AvalesWebAppServlet;
 
+import com.AvalesWebAppLogics.actividadLogic;
 import com.AvalesWebAppLogics.proyectoLogic;
+import com.AvalesWebAppObjs.actividadObj;
 import com.AvalesWebAppObjs.proyectoObj;
 import java.io.IOException;
 import java.util.List;
@@ -44,7 +46,16 @@ public class ServletMainPage extends HttpServlet {
                     .forward(request, response);
             }
         
-        
+        if (stringform.equals("3"))
+            {   
+                actividadLogic CLogic = new actividadLogic();
+                
+                List<actividadObj> listaDeActividadesTotal = CLogic.getAllActivities();
+                
+                request.getSession().setAttribute("listaDeActividadesTotal", listaDeActividadesTotal);
+                request.getRequestDispatcher("Calendario.jsp")
+                    .forward(request, response);
+            }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

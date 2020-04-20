@@ -6,21 +6,243 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>AVALES</title>
+        
+        <title>AVALES </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Añadir los links para jar y bulma-->
+
+        <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/bulma/Style.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+
     </head>
     <body>
-        <h1>AVALES</h1>
-        <br><br>
-        <a href="ServletMainPage?formid=1">Ver proyectos de Avales</a>
-        <br><br>
-        <a href="register.jsp">Register</a>
-        <br><br>
-        <a href="login.jsp">Login</a>
-        <br><br>
-        <a href="loginAdmin.jsp">Login as Administrator</a>
-        <br><br>
+        <!-- ENCABEZADO--> 
+        <section class="hero is-light">
+            <!-- Hero head: will stick at the top -->
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+
+                        <div class="navbar-brand">
+                            <div class="navbar-item">
+                                <a href="https://www.facebook.com/avales.sv" target="_blank">
+                                    <img src="styles/Imagenes/facebook.png" alt="logotipo"/>
+                                </a>
+                            </div>
+                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+
+                        <div class="navbar-brand">
+                            <div class="navbar-item">
+                                <a href="https://twitter.com/AVALES_SV" target="_blank">
+                                    <img src="styles/Imagenes/twitter.png" alt="logotipo"/>
+                                </a>
+                            </div>
+                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+
+                        <div id="navbarMenuHeroA" class="navbar-menu">
+                            <div class="navbar-end">
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="index.html">
+                                            <span>Inicio</span>
+                                        </a>
+                                    </div>
+                                </span> 
+
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="register.jsp">
+                                            <span>Registro</span>
+                                        </a>
+                                    </div>
+                                </span> 
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="login.jsp">
+                                            <span>Usuario</span>
+                                        </a>
+                                    </div>
+                                </span>  
+
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <span class="icon">
+                                            <i class="fab"></i>
+                                        </span>
+                                        <a href="loginAdmin.jsp">Administración</a>
+                                    </div>
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Hero content: will be in the middle -->
+            <div class="hero-body">
+
+                <img src="styles/Imagenes/avales.png" alt="img" style="float:left;width:390px;height:245px;>
+                     <div class="title">
+                <br><br><br><h1 style="color:darkblue;text-align:center;font-size:230%;font-family: sans-serif;">Edifiquemos juntos una mejor sociedad</h1>
+                <div class="subtitle">
+                    <h1 style="color:darkblue;text-align:center;font-size:100%;font-family: sans-serif;">• Valores • Educación • Comunicación • Liderazgo •</h1>
+                </div>
+
+            </div>
+
+            <!-- Hero footer: will stick at the bottom -->
+            <div class="hero-foot">
+                <nav class="tabs">
+                    <div class="container">
+                        <ul>
+                            <li class="is-active"><a>Trayectoria</a></li>
+                            <li><a href="ServletMainPage?formid=1">Proyectos</a></li>
+                            <li><a>Comunidad</a></li>
+                            <li><a>Eventos</a></li>
+                            <li><a>Contactos</a></li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+
+        <!--CUERPO-->
+
+        <div class="tile is-ancestor">
+            <div class="tile is-parent ">
+                <div class="tile is-child box">
+                    <p class="title"style="color: darkblue">¿Qué es AVALES?</p>
+                    <p style="color: gray">Somos una organización apolítica, no lucrativa, ni religiosa, creada el 09 de abril de 2012, como un movimiento que reúne a personas de diversos sectores de la sociedad, quienes desafiados por los problemas sociales que enfrentan adolescentes y jóvenes de nuestro país, se han comprometido a trabajar unidos para sembrar semillas de valores en las nuevas generaciones, con especial énfasis en la atención integral a la familia. Nuestros fines incluyen:</p>
+                    <br>
+                    <p style="color: gray">a) Fomentar la educación integral de las personas aplicando principios y valores éticos, desafiándoles a vivir responsablemente, practicando la integridad en todos los aspectos de su vida, a fin de generar una cultura de respeto y sana convivencia.</p>
+                    <br>
+                    <p style="color: gray">b) Generar una transformación socio espiritual positiva en las comunidades, a través de acciones como la educación integral de las nuevas generaciones, contribuyendo al desarrollo humano de las personas para construir una mejor sociedad.</p>
+                    <br>
+                    <p style="color: gray">c) Realizar acciones estratégicas de apoyo a sectores vulnerables de la sociedad con implementación de programas y realización de proyectos especializados en VALORES, EDUCACIÓN, SALUD, ARTE, DEPORTE, CULTURA Y AYUDA SOCIAL.</p>
+                    <br>
+                    <p style="color: gray">Con nuestro programa de Educación en Valores ESFAMILIA | INFLUYENTES contribuimos a fomentar la práctica de principios y valores éticos en cada individuo para activar su potencial personal a fin de generar una influencia positiva en su entorno.</p>
+                </div>
+
+                <div class="tile is-4 is-vertical is-parent">
+                    <div class="tile is-child box">
+                        <p class="title" style="color: darkblue">Misión</p>
+                        <p style="color: gray">Fomentar la práctica de principios y valores éticos en la sociedad salvadoreña.</p>
+                    </div>
+
+                    <div class="tile is-child box">
+                        <p class="title" style="color: darkblue">Visión</p>
+                        <p style="color: gray">El Salvador es una nación donde sus habitantes viven en justicia, paz, alegría y prosperidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTOS-->
+
+        <section class="hero">
+            <div class="hero-body">
+                <nav class="level">
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">Tweets</p>
+                            <p class="title">3,456</p>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">Following</p>
+                            <p class="title">123</p>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">Followers</p>
+                            <p class="title">456K</p>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">Likes</p>
+                            <p class="title">789</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-12">
+                <div class="tile">
+
+                    <!--VALORES-->
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-light">
+                            <p class="title">Educando diferente</p>
+                            <p class="subtitle">Con tecnología y pasión</p>
+                            <figure class="image is-3by3 is-center">
+                                <a href="">
+                                    <img src="styles/Imagenes/Valores-0001_Mesa de trabajo 1.png" alt="Logo"/>
+                                </a>
+                            </figure>
+                        </article>
+                    </div>
+
+                    <!--ESFAMILIA-->
+                    <div class="tile is-parent">  
+                        <article class="tile is-child notification is-light">
+                            <p class="title">...tiles</p>
+                            <p class="subtitle">Bottom tile</p>
+                            <figure class="image is-3by3">
+                                <a href="">
+                                    <img src="styles/Imagenes/2. ESFAMILIA.png" alt="Logo"/>
+                                </a>
+                            </figure>
+                        </article>
+                    </div>
+
+                    <!--AMARTE-->
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-light">
+                            <p class="title">Middle tile</p>
+                            <p class="subtitle">With an image</p>
+                            <br>
+
+                            <figure class="image is-3by3">
+                                <a href="">
+                                    <img src="styles/Imagenes/AMARTE-Eslogan.png" alt="Logo"/>
+                                </a>
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
 
     </body>
 </html>

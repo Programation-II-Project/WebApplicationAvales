@@ -4,6 +4,12 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
         
@@ -78,8 +84,15 @@ and open the template in the editor.
                                             <span>Usuario</span>
                                         </a>
                                     </div>
-                                </span>  
-
+                                </span>
+                                
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="perfil.jsp">
+                                            <span>Perfil</span>
+                                        </a>
+                                    </div>
+                                </span>
 
                                 <span class="navbar-item">
                                     <div class="button is-primary is-inverted">
@@ -99,17 +112,22 @@ and open the template in the editor.
 
             <!-- Hero content: will be in the middle -->
             <div class="hero-body">
-
-                <img src="styles/Imagenes/avales.png" alt="img" style="float:left;width:390px;height:245px;>
+                <div class="container"> 
+                <img src="styles/Imagenes/avales.png" alt="img" style="float:left;width:390px;height:245px"/>
                      <div class="title">
-                <br><br><br><h1 style="color:darkblue;text-align:center;font-size:230%;font-family: sans-serif;">Edifiquemos juntos una mejor sociedad</h1>
-                <div class="subtitle">
-                    <h1 style="color:darkblue;text-align:center;font-size:100%;font-family: sans-serif;">• Valores • Educación • Comunicación • Liderazgo •</h1>
+                <br><br><br><h1 style="color:darkblue;text-align:center;font-size:130%;font-family: sans-serif;">Edifiquemos juntos una mejor sociedad</h1>
+                <div class="subtitle is-3">
+                    <h1 style="color:darkblue;text-align:center;font-size:60%;font-family: sans-serif;">• Valores • Educación • Comunicación • Liderazgo •</h1>
                 </div>
-
+                </div>
             </div>
 
             <!-- Hero footer: will stick at the bottom -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <div class="hero-foot">
                 <nav class="tabs">
                     <div class="container">
@@ -117,9 +135,8 @@ and open the template in the editor.
                             <li class="is-active"><a>Trayectoria</a></li>
                             <li><a href="ServletMainPage?formid=1">Proyectos</a></li>
                             <li><a>Comunidad</a></li>
-                            <li><a>Eventos</a></li>
-                            <li><a>Contactos</a></li>
-
+                            <li><a href="ActividadesAvales.jsp">Actividades</a></li>
+                            <li><a href="Calendario.jsp">Calendario</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -161,37 +178,6 @@ and open the template in the editor.
 
         <!-- PROYECTOS-->
 
-        <section class="hero">
-            <div class="hero-body">
-                <nav class="level">
-                    <div class="level-item has-text-centered">
-                        <div>
-                            <p class="heading">Tweets</p>
-                            <p class="title">3,456</p>
-                        </div>
-                    </div>
-                    <div class="level-item has-text-centered">
-                        <div>
-                            <p class="heading">Following</p>
-                            <p class="title">123</p>
-                        </div>
-                    </div>
-                    <div class="level-item has-text-centered">
-                        <div>
-                            <p class="heading">Followers</p>
-                            <p class="title">456K</p>
-                        </div>
-                    </div>
-                    <div class="level-item has-text-centered">
-                        <div>
-                            <p class="heading">Likes</p>
-                            <p class="title">789</p>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </section>
-
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-12">
                 <div class="tile">
@@ -199,50 +185,50 @@ and open the template in the editor.
                     <!--VALORES-->
                     <div class="tile is-parent">
                         <article class="tile is-child notification is-light">
-                            <p class="title">Educando diferente</p>
-                            <p class="subtitle">Con tecnología y pasión</p>
+                            <br>
+                            <br>
                             <figure class="image is-3by3 is-center">
                                 <a href="">
                                     <img src="styles/Imagenes/Valores-0001_Mesa de trabajo 1.png" alt="Logo"/>
                                 </a>
                             </figure>
+                            <p class="subtitle" style="color:gray;text-align:center;font-size:100%;">Programa de formación en valores éticos y financieros para activar el potencial de las personas a fin de que asuman su responsabilidad personal para autogenerar su bienestar integral.</p>
                         </article>
                     </div>
 
                     <!--ESFAMILIA-->
                     <div class="tile is-parent">  
                         <article class="tile is-child notification is-light">
-                            <p class="title">...tiles</p>
-                            <p class="subtitle">Bottom tile</p>
                             <figure class="image is-3by3">
                                 <a href="">
                                     <img src="styles/Imagenes/2. ESFAMILIA.png" alt="Logo"/>
                                 </a>
                             </figure>
+                            <p class="subtitle" style="color:gray;text-align:center;font-size:100%;">Beneficio Social en la Familia. La mejor solución a los problemas sociales que niñas, niños, adolescentes y jóvenes enfrentan, se encuentra en una sólida relación familiar donde los miembros de la familia se respetan y se aman unos a otros. Este ambiente saludable facilita el desarrollo integral de cada miembro de la familia.</p>
                         </article>
                     </div>
 
                     <!--AMARTE-->
                     <div class="tile is-parent">
                         <article class="tile is-child notification is-light">
-                            <p class="title">Middle tile</p>
-                            <p class="subtitle">With an image</p>
                             <br>
-
                             <figure class="image is-3by3">
-                                <a href="">
+                                <a href="Amarte.jsp">
                                     <img src="styles/Imagenes/AMARTE-Eslogan.png" alt="Logo"/>
                                 </a>
                             </figure>
+                            <p class="subtitle" style="color:gray;text-align:center;font-size:100%;">Programa transformador de perspectivas. Toma lo que conocemos como “arte” y lo trasciende a un nivel superior a los dibujos y pinturas demostrando que todos pueden ser artistas en su diario vivir.</p>
                         </article>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
     </body>
+</html>
+
+
+
+
+
+    
 </html>

@@ -12,7 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>NO PUEDES BORRAR ESTA SOLICITUD YA QUE YA HA SIDO ACEPTADA</h1>
-        <a href="ServletUsuario?formid=2">Back</a>
+        <h1>NO PUEDES BORRAR ESTA SOLICITUD YA QUE YA HA SIDO TOMADA UNA DESICION POR PARTE DE LOS ADMINISTRADORES</h1>
+        <br><br>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
 </html>

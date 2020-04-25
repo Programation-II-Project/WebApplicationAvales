@@ -126,5 +126,74 @@ public class registerLogic extends Logic
          return admin;
     }
 
+    public nuevoRegistroObj getUserByID(int ID) 
+    {
+         nuevoRegistroObj Info = null;
+         DatabaseX database = getDatabase();
+         ResultSet CResult = database.executeQuery("SELECT * FROM proyecto.registros WHERE ID = "+ID+";");
+         
+         if(CResult!=null)
+         {
+             try {
+                int id;
+                String nombre;
+                String telefono_casa;
+                String celular;
+                String profesion;
+                String direccion;
+                String fecha;
+                String estado_civil;
+                String email;
+                int familia;
+                int iglesia;
+                int gobierno;
+                int mc;
+                int educacion;
+                int economia;
+                int arte;
+                String facebook;
+                String twitter;
+                String password;
+                
+                
+                while(CResult.next())
+                {
+                id = CResult.getInt("ID");
+                nombre = CResult.getString("Nombre");
+                telefono_casa = CResult.getString("Telefono_Casa");
+                celular = CResult.getString("Celular");
+                profesion = CResult.getString("Profesion");
+                direccion = CResult.getString("Direccion");
+                fecha = CResult.getString("Fecha_Nacimiento");
+                estado_civil = CResult.getString("Estado_Civil");
+                email = CResult.getString("Email");
+                familia = CResult.getInt("Familia");
+                iglesia = CResult.getInt("Iglesia");
+                gobierno = CResult.getInt("Gobierno");
+                mc = CResult.getInt("MC");
+                educacion = CResult.getInt("Educacion");
+                economia = CResult.getInt("Economia");
+                arte = CResult.getInt("Artes");
+                facebook = CResult.getString("Facebook");
+                twitter = CResult.getString("Twitter");
+                password = CResult.getString("password");
+
+                
+                Info = new nuevoRegistroObj(id,nombre,telefono_casa,celular,profesion,direccion,fecha,estado_civil,
+                     email,familia,iglesia,gobierno,mc,educacion,economia,arte,facebook,twitter,password);
+
+                
+                }
+             } 
+             catch (SQLException ex) 
+             {
+                 Logger.getLogger(registerLogic.class.getName()).log(Level.SEVERE, null, ex);
+             }
+         }
+         
+         return Info;
+    }
+
+
     
 }

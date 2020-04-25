@@ -4,6 +4,7 @@
     Author     : Abel_
 --%>
 
+<%@page import="com.AvalesWebAppObjs.nuevoRegistroObj"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,6 +15,10 @@
     <%
     boolean bHasFailed = 
             (boolean)request.getSession().getAttribute("bHasFailed");
+    
+    nuevoRegistroObj registroEntrante =
+            (nuevoRegistroObj)request.getSession().getAttribute("registroEntrante");
+
     %>
     
     <body>
@@ -26,7 +31,7 @@
         %>
         <p>Datos guardados con exito, ¿desea ingresar a su cuenta o seguir conociendo los diferentes proyectos de AVALES?</p>
         <a href="index.html">AVALES</a>
-        <a href="perfil.jsp">PERFIL</a> 
+        <a href="RegisterLoginServlet?formid=2&fl_email=<%= registroEntrante.getEmail() %>&fl_password=<%= registroEntrante.getPassword() %>">PERFIL</a> 
         <%
             }
             else
@@ -37,5 +42,6 @@
         <%
             }
         %>
+        <br><br>
     </body>
 </html>

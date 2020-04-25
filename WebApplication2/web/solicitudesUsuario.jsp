@@ -23,7 +23,7 @@
                 (List<solicitudAyudaObj>)request.getSession().getAttribute("ayudas");
     %>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Estas son tus solicitudes de ayuda </h1>
         <br><br>
          <table style="width:50%" border="1">
             <tr>
@@ -76,7 +76,12 @@
                 }
             %>
         </table>
-        <br><br> 
-        <a href="perfil.jsp">Back</a>
+        <br><br>
+        <button onclick="goBack()">Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
     </body>
 </html>

@@ -3,6 +3,7 @@ package com.AvalesWebAppServlet;
 
 import com.AvalesWebAppLogics.ayudaLogic;
 import com.AvalesWebAppLogics.messageLogic;
+import com.AvalesWebAppObjs.NewMensaje;
 import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
 import java.io.IOException;
@@ -121,8 +122,12 @@ public class ServletUsuario extends HttpServlet
               messageLogic CnewMessageL = new messageLogic();
               int p_count;
               p_count = CnewMessageL.getIdMessageUserFrom(user.getId()).size() + 1;
+              
               boolean newMessage = CnewMessageL.insertMessage(user.getId(), p_count, s_newMessage, adminStatus);
               
+              List<NewMensaje> totalMensajes = CnewMessageL.getAllMensajesFromUser(user.getId());
+              
+              request.getSession().setAttribute("totalMensaje", totalMensajes);
               request.getSession().setAttribute("message", newMessage);
                 request.getRequestDispatcher("Mensajeria.jsp")
                     .forward(request, response);

@@ -12,6 +12,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -56,6 +58,43 @@ public class messageLogic extends Logic
                 }
          }          
          return listaMensajes;
+    }
+    public List<NewMensaje> getAllMensajesFromUser(int p_idUser)
+    {
+        ArrayList<NewMensaje> totalMensajes = null;
+            DatabaseX database = getDatabase();
+            
+            ResultSet Cresult = database.executeQuery("SELECT * "
+                + "FROM proyecto.mensajes where idUserFrom ="+p_idUser+";");
+                
+                if(Cresult != null)
+                {
+     
+                    int idUserFrom;
+                    int idMensajeUserFrom;
+                    String mensaje;
+                    byte admin = 0;
+                    NewMensaje MTemp;
+                    totalMensajes = new ArrayList<>();
+                           
+            try {
+                while(Cresult.next())
+                {
+            
+                    idUserFrom = Cresult.getInt("IdUserFrom");
+                    idMensajeUserFrom = Cresult.getInt("IdMensajeUserFrom");
+                    mensaje = Cresult.getString("Mensaje");
+                    
+                    MTemp = new NewMensaje(idUserFrom, idMensajeUserFrom, mensaje, admin);
+                    
+                    totalMensajes.add(MTemp);
+                    
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(messageLogic.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                }
+        return totalMensajes;
     }
     
 }

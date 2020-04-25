@@ -2,23 +2,33 @@
 package com.AvalesWebAppServlet;
 
 import com.AvalesWebAppLogics.ayudaLogic;
+
+import com.AvalesWebAppLogics.messageLogic;
+import com.AvalesWebAppObjs.NewMensaje;
+
 import com.AvalesWebAppLogics.donacionesLogic;
 import com.AvalesWebAppObjs.donacionObj;
+
 import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @WebServlet(name = "ServletUsuario", urlPatterns = {"/ServletUsuario"})
 public class ServletUsuario extends HttpServlet 
     {
         protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-                throws ServletException, IOException 
+                throws ServletException, IOException, SQLException 
         {
             String stringform = request.getParameter("formid");
 
@@ -105,11 +115,36 @@ public class ServletUsuario extends HttpServlet
                         .forward(request, response);
                     }
             }
+
+            if (stringform.equals("100"))
+            {
+              String s_newMessage = request.getParameter("fl_newMessage");
+              byte adminStatus = 0;
+              
+            
+             nuevoRegistroObj user = 
+                (nuevoRegistroObj)request.getSession().getAttribute("logged_user");
+             
+              messageLogic CnewMessageL = new messageLogic();
+              int p_count;
+              p_count = CnewMessageL.getIdMessageUserFrom(user.getId()).size() + 1;
+              
+              boolean newMessage = CnewMessageL.insertMessage(user.getId(), p_count, s_newMessage, adminStatus);
+              
+              List<NewMensaje> totalMensajes = CnewMessageL.getAllMensajesFromUser(user.getId());
+              
+              request.getSession().setAttribute("totalMensaje", totalMensajes);
+              request.getSession().setAttribute("message", newMessage);
+                request.getRequestDispatcher("Mensajeria.jsp")
+                    .forward(request, response);
+            }
+
             
             if (stringform.equals("5"))
             {
                 solicitudAyudaObj ayudaActual = 
                             (solicitudAyudaObj)request.getSession().getAttribute("ayudaAEditar");
+
                 
                 String proyecto = request.getParameter("f_proyecto");
                 String descripcion = request.getParameter("f_descripcion");
@@ -271,7 +306,11 @@ public class ServletUsuario extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            try {
+                processRequest(request, response);
+            } catch (SQLException ex) {
+                Logger.getLogger(ServletUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
 
     /**
@@ -285,7 +324,11 @@ public class ServletUsuario extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            try {
+                processRequest(request, response);
+            } catch (SQLException ex) {
+                Logger.getLogger(ServletUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
 
     /**

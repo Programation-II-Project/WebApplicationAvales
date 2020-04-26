@@ -10,16 +10,16 @@
     <head>
         <title>AMARTE</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+
         <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
         <link href="styles/bulma/Style.css" rel="stylesheet" type="text/css"/>
         <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
-        
-        
+
+
         <title>AMARTE</title>
     </head>
     <body>
-        
+
         <!-- ENCABEZADO--> 
         <section class="hero is-light">
             <!-- Hero head: will stick at the top -->
@@ -108,93 +108,84 @@
                     </div>
                 </nav>
             </div>
-            
-            
+
+
 
             <div class="hero-body">
                 <div class="container"> 
 
-                <img src="styles/Encabezados/amartee.png" alt="img">
+                    <img src="styles/Encabezados/amartee.png" alt="img">
 
                 </div>
             </div>
-            
+
             <!-- Hero footer: will stick at the bottom -->
-            
-                <div class="hero-foot">
-                    <nav class="tabs">
-                        <div class="container">
-                            <ul>
-                                <div id="navbarMenuHeroA" class="navbar-menu">
+
+            <div class="hero-foot">
+                <nav class="tabs">
+                    <div class="container">
+                        <ul>
+                            <div id="navbarMenuHeroA" class="navbar-menu">
+                                <span class="navbar-item">
+
                                     <span class="navbar-item">
-
-                                        <span class="navbar-item">
-                                            <div class="button is-primary is-inverted">
-                                                <a href="ServletMainPage?formid=1">
-                                                    <span>Proyectos</span>
-                                                </a>
-                                            </div>
-                                        </span>
-
-                                        <span class="navbar-item">
-                                            <div class="button is-primary is-inverted">
-                                                <a href="ServletMainPage?formid=3">
-                                                    <span>Calendario </span>
-                                                </a>
-                                            </div>
-                                        </span>        
+                                        <div class="button is-primary is-inverted">
+                                            <a href="ServletMainPage?formid=1">
+                                                <span>Proyectos</span>
+                                            </a>
+                                        </div>
                                     </span>
-                                </div>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            
-            <!-- Informacion-->
+
+                                    <span class="navbar-item">
+                                        <div class="button is-primary is-inverted">
+                                            <a href="ServletMainPage?formid=3">
+                                                <span>Calendario </span>
+                                            </a>
+                                        </div>
+                                    </span>        
+                                </span>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- INFO -->
+
 <div class="tile is-ancestor">
-  <div class="tile is-vertical is-12">
-    <div class="tile">
-      <div class="tile is-parent is-vertical">
-        <article class="tile is-child notification is-primary">
-            <p class="title" style="color: white; align-content: center">AMARTE</p>
-            <p class="subtitle" style="color: ghostwhite; align-content: center">
-                Es un programa de beneficio social
-                respaldado por AVALES, que impulsa, a través
-                de las artes plásticas crear obras artísticas
-                inspiradas en diversas historias de seres
-                humanos con gran potencial para motivar a
-                otros, a fin de promover la autosuperación.</p>
-            <p class="subtitle" style="color: ghostwhite; align-content: center">
-                De esta forma, AMARTE contribuye a iluminar
-                la vida de un ser humano, exponiéndole a
-                grandes oportunidades, y conectándole con
-                gente altruista como usted.</p>
-        </article>
-        <article class="tile is-child notification is-warning">
-          <p class="title">Nace</p>
-          <p class="subtitle">El año 2019, con su primer proyecto
-              denominado, “Vuela, Sueños de Acuarelas”, el
-              cual presenta, una serie de exposiciones de
-              pinturas. Son 19 jóvenes que compartieron sus
-              historias personales, con sus desafíos superados y
-              grandes batallas ganadas, para realizar su sueño de
-              estudiar en la ESEN.</p>
-        </article>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-info">
-          <p class="title">Middle tile</p>
-          <p class="subtitle">With an image</p>
-          <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/640x480.png">
-          </figure>
-        </article>
-      </div>
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box" style=" background-image: url(styles/Imagenes/back.png)">
+        <p class="title has-text-centered" style="color: #002752; font-family: var; font-style: oblique">Nace</p>
+      <p>El año 2019, con su primer proyecto 
+          denominado, “Vuela, Sueños de Acuarelas”, el
+          cual presenta, una serie de exposiciones de
+          pinturas. Son 19 jóvenes que compartieron sus
+          historias personales, con sus desafíos superados y
+          grandes batallas ganadas, para realizar su sueño de
+          estudiar en la ESEN.</p>
+    </div>
+    <div class="tile is-child box" style=" background-image: url(styles/Imagenes/back.png)">
+      <p class="title has-text-centered" style="color: #002752; font-family: var; font-style: oblique">Nace</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <div class="tile is-child box" style=" background-image: url(styles/Imagenes/back.png)">
+        <p class="title has-text-centered" style="color: #002752; font-family: var; font-style: oblique">¿Qué es?</p>
+      <p>Es un programa de beneficio social
+      respaldado por AVALES, que impulsa, a través
+      de las artes plásticas crear obras artísticas
+      inspiradas en diversas historias de seres
+      humanos con gran potencial para motivar a
+      otros, a fin de promover la autosuperación.</p>
+      <p>De esta forma, AMARTE contribuye a iluminar
+          la vida de un ser humano, exponiéndole a
+          grandes oportunidades, y conectándole con
+          gente altruista como usted.</p>
+
     </div>
   </div>
 </div>
-            
         </section>
-        
     </body>
 </html>

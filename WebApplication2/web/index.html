@@ -105,21 +105,12 @@ and open the template in the editor.
             <!-- Hero content: will be in the middle -->
             <div class="hero-body">
                 <div class="container"> 
-                    <img src="styles/Imagenes/avales.png" alt="img" style="float:left;width:390px;height:245px"/>
-                    <div class="title">
-                        <br><br><br><h1 style="color:darkblue;text-align:center;font-size:130%;font-family: sans-serif;">Edifiquemos juntos una mejor sociedad</h1>
-                        <div class="subtitle is-3">
-                            <h1 style="color:darkblue;text-align:center;font-size:60%;font-family: sans-serif;">• Valores • Educación • Comunicación • Liderazgo •</h1>
-                        </div>
-                    </div>
+                    <img src="styles/Encabezados/avales.png" alt=""/>
                 </div>
+            </div>
 
                 <!-- Hero footer: will stick at the bottom -->
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+               
                 <div class="hero-foot">
                     <nav class="tabs">
                         <div class="container">
@@ -141,7 +132,16 @@ and open the template in the editor.
                                                     <span>Calendario </span>
                                                 </a>
                                             </div>
-                                        </span>        
+                                        </span> 
+                                        
+                                        <span class="navbar-item">
+                                            <div class="button is-primary is-inverted">
+                                                <a href="RelacionesEstrategicas.jsp">
+                                                    <span>Relaciones Estratégicas </span>
+                                                </a>
+                                            </div>
+                                        </span> 
+                                        
                                     </span>
                                 </div>
                             </ul>
@@ -149,7 +149,7 @@ and open the template in the editor.
                     </nav>
                 </div>
         </section>
-
+ 
         
         <!--CUERPO-->
 
@@ -183,6 +183,130 @@ and open the template in the editor.
             </div>
         </div>
 
+    <!-- Componentes de avales-->
+
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link href="styles/slider/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Demo styles -->
+    <style>
+      html, body {
+        position: relative;
+        height: 100%;
+      }
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 60%;
+        background: #000;
+      }
+      .swiper-slide {
+        font-size: 18px;
+        color:#fff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 40px 60px;
+      }
+      .parallax-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+      }
+      .swiper-slide .title {
+        font-size: 53px;
+        font-weight: 300;
+        font-family: var;
+      }
+      .swiper-slide .subtitle {
+        font-size: 23px;
+        font-style: inherit;
+      }
+      .swiper-slide .text {
+        font-size: 16px;
+        max-width: 400px;
+        line-height: 1.6;
+        font-style: oblique;
+      }
+
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="parallax-bg" style="background-image:url(styles/Imagenes/onda.png)" data-swiper-parallax="-23%"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0" style=" color: blue">Nuestra Acción de Valores</div>
+                <div class="subtitle" data-swiper-parallax="-200" style=" color: #00b0ff">para El Salvador</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p>Estamos generando una transformación
+                        socio espiritual positiva en las
+                        comunidades, a través de la educación
+                        de la familia con valores contribuyendo
+                        así al desarrollo humano integral de las
+                        personas; edificando juntos una mejor
+                        sociedad aplicando principios
+                        fundamentales de convivencia en
+                        beneficio de todos.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0" style=" color: blue">Slide 2</div>
+                <div class="subtitle" data-swiper-parallax="-200" style=" color: #00b0ff">Subtitle</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p></p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0" style=" color: blue">Slide 3</div>
+                <div class="subtitle" data-swiper-parallax="-200" style=" color: #00b0ff">Subtitle</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="styles/slider/swiper.min.js" type="text/javascript"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        speed: 600,
+        parallax: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    
         <!-- PROYECTOS-->
 
         <div class="tile is-ancestor">
@@ -195,7 +319,7 @@ and open the template in the editor.
                             <br>
                             <br>
                             <figure class="image is-3by3 is-center">
-                                <a href="">
+                                <a href="VALORES.jsp">
                                     <img src="styles/Imagenes/Valores-0001_Mesa de trabajo 1.png" alt="Logo"/>
                                 </a>
                             </figure>
@@ -207,7 +331,7 @@ and open the template in the editor.
                     <div class="tile is-parent">  
                         <article class="tile is-child notification is-light">
                             <figure class="image is-3by3">
-                                <a href="">
+                                <a href="ESFAMILIA.jsp">
                                     <img src="styles/Imagenes/2. ESFAMILIA.png" alt="Logo"/>
                                 </a>
                             </figure>
@@ -231,11 +355,4 @@ and open the template in the editor.
             </div>
         </div>
     </body>
-</html>
-
-
-
-
-
-    
 </html>

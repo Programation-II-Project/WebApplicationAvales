@@ -9,90 +9,278 @@
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>Galería | AMARTE</title>
      
-     <link href="styles/Carrusel/materialize.css" rel="stylesheet" type="text/css"/>
-
-     <!-- Estilos CSS -->
-     <link href="styles/lightbox/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/bulma/Style.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+     
+     <title>Galería | AMARTE</title>
 </head>
 <body>
-    
-    
-    
-     <main class="container">
-          <div class="row">
-               <div class="col s12 center-align">
-                   <img src="styles/Imagenes/VUELA-Logo.png" alt="img" style="align-content: center;width:380px;height:165px"/> 
-               </div>
-              <br>
-              <br>
-              <br>
-              <div class="title">
-                <br>
-                <br>
-                <br>
-                <h1 style="color:gray;text-align:center;font-size:170%;">"Agrega sólo forma... y volará"</h1>
-                <div class="subtitle">
-                    <h1 style="color:black;text-align:center;font-size:130%;">Luis Poma</h1>
+        <!-- ENCABEZADO--> 
+        <section class="hero is-light">
+            <!-- Hero head: will stick at the top -->
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <div class="navbar-item">
+                                <a href="https://instagram.com/amarte_sv?r=nametag" target="_blank">
+                                    <img src="styles/Imagenes/In1.png" alt="logotipo"/>
+                                </a>
+                            </div>
+                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+
+                        <div class="navbar-brand">
+                            <div class="navbar-item">
+                                <a href="https://www.facebook.com/amarte.sv/" target="_blank">
+                                    <img src="styles/Imagenes/Fe1.png" alt="logotipo"/>
+                                </a>
+                            </div>
+                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+
+                        <div class="navbar-brand">
+                            <div class="navbar-item">
+                                <a href="https://twitter.com/AmArte_sv" target="_blank">
+                                    <img src="styles/Imagenes/Tw1.png" alt="logotipo"/>
+                                </a>
+                            </div>
+                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+
+                        <div id="navbarMenuHeroA" class="navbar-menu">
+                            <div class="navbar-end">
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="index.html">
+                                            <span>Inicio</span>
+                                        </a>
+                                    </div>
+                                </span> 
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="login.jsp">
+                                            <span>Usuario</span>
+                                        </a>
+                                    </div>
+                                </span>
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <span class="icon">
+                                            <i class="fab"></i>
+                                        </span>
+                                        <a href="loginAdmin.jsp">Administración</a>
+                                    </div>
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            
+
+            <div class="hero-body">
+                <div class="container"> 
+
+                <img src="styles/Encabezados/amartee.png" alt="img">
+
                 </div>
+            </div>
+            
+            <!-- Hero footer: will stick at the bottom -->
+            
+                <div class="hero-foot">
+                    <nav class="tabs">
+                        <div class="container">
+                            <ul>
+                                <div id="navbarMenuHeroA" class="navbar-menu">
+                                    <span class="navbar-item">
+
+                                        <span class="navbar-item">
+                                            <div class="button is-primary is-inverted">
+                                                <a href="ServletMainPage?formid=1">
+                                                    <span>Proyectos</span>
+                                                </a>
+                                            </div>
+                                        </span>
+
+                                        <span class="navbar-item">
+                                            <div class="button is-primary is-inverted">
+                                                <a href="ServletMainPage?formid=3">
+                                                    <span>Calendario </span>
+                                                </a>
+                                            </div>
+                                        </span>        
+                                    </span>
+                                </div>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-          </div>
-          <div class="row galeria">
-               
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/1.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/2.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/5.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/4.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/7.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/8.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/9.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/11.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/10.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
+            
+        </section>
+    <!-- Separador-->
+    
+    <section class="hero is-dark">
+      <div class="hero-body" style=" background-image: url(styles/Imagenes/ff.png)">
 
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/12.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
+    <div class="container has-text-centered">
+        <img style="width: 440px; height: 200px;" src="styles/Imagenes/VUELA-Logo.png" alt=""/>
+      <h2 class="subtitle" style=" align-content: center; font-family: initial; font-style: oblique; color: black">
+        Agrega sólo forma... y volará
+      </h2>
+    </div>
+  </div>
+  </section>
+    <br>
+        
+        <!-- Galeria -->
+    <section>
+        
+        <link href="styles/Overlay/estilos.css" rel="stylesheet" type="text/css"/>
+        
+    <div class="galeria">
+        <div class="contenedor-imagenes">
+            <div class="imagen">
+                <img src="styles/Overlay/img/1.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/1.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/2.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/2.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/3.PNG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/3.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/4.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/4.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/5.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/5.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/6.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/6.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/7.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/7.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/8.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/8.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/9.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/9.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/10.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/10.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/11.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/11.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/12.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/12.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/13.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/13.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/14.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/14.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/15.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/15.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/16.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/16.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/17.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/17.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/18.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/18.1.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="styles/Overlay/img/19.JPG" alt=""/>
+                <div class="overlay">
+                    <img src="styles/Overlay/img/19.1.jpg" alt=""/>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
 
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/13.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-               <div class="col s12 m4 l3">
-                    <div class="material-placeholder"><img src="styles/lightbox/img/14.JPG" alt="" class="responsive-img materialboxed"></div>
-               </div>
-              
-          </div>
-     </main>
 
-    <script src="styles/Carrusel/materialize.js" type="text/javascript"></script>
-    <script src="styles/lightbox/main.js" type="text/javascript"></script>
 </body>
 </html>
 

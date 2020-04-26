@@ -16,7 +16,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
         
         
-        <title>JSP Page</title>
+        <title>AMARTE</title>
     </head>
     <body>
         
@@ -92,14 +92,6 @@
                                         </a>
                                     </div>
                                 </span>
-                                
-                                <span class="navbar-item">
-                                    <div class="button is-primary is-inverted">
-                                        <a href="perfil.jsp">
-                                            <span>Perfil</span>
-                                        </a>
-                                    </div>
-                                </span>
 
                                 <span class="navbar-item">
                                     <div class="button is-primary is-inverted">
@@ -116,19 +108,92 @@
                     </div>
                 </nav>
             </div>
+            
+            
 
             <div class="hero-body">
                 <div class="container"> 
 
-                <img src="styles/Imagenes/AMARTE-Eslogan.png" alt="img" style="float:left;width:400px;height:245px;>
-                     <div class="title">
-                <br><br><h1 style="color:darkblue;text-align:center;font-size:180%;font-family: sans-serif;">"Creo que no hay nada más artístico</h1>
-                <h1 style="color:darkblue;text-align:center;font-size:180%;font-family: sans-serif;">que amar verdaderamente a la gente"</h1>
-                <div class="subtitle">
-                    <h1 style="color:darkblue;text-align:center;font-size:100%;font-family: sans-serif;">Van Gogh</h1>
+                <img src="styles/Encabezados/amartee.png" alt="img">
+
                 </div>
+            </div>
+            
+            <!-- Hero footer: will stick at the bottom -->
+            
+                <div class="hero-foot">
+                    <nav class="tabs">
+                        <div class="container">
+                            <ul>
+                                <div id="navbarMenuHeroA" class="navbar-menu">
+                                    <span class="navbar-item">
+
+                                        <span class="navbar-item">
+                                            <div class="button is-primary is-inverted">
+                                                <a href="ServletMainPage?formid=1">
+                                                    <span>Proyectos</span>
+                                                </a>
+                                            </div>
+                                        </span>
+
+                                        <span class="navbar-item">
+                                            <div class="button is-primary is-inverted">
+                                                <a href="ServletMainPage?formid=3">
+                                                    <span>Calendario </span>
+                                                </a>
+                                            </div>
+                                        </span>        
+                                    </span>
+                                </div>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-            </div>                           
+            
+            <!-- Informacion-->
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-12">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+            <p class="title" style="color: white; align-content: center">AMARTE</p>
+            <p class="subtitle" style="color: ghostwhite; align-content: center">
+                Es un programa de beneficio social
+                respaldado por AVALES, que impulsa, a través
+                de las artes plásticas crear obras artísticas
+                inspiradas en diversas historias de seres
+                humanos con gran potencial para motivar a
+                otros, a fin de promover la autosuperación.</p>
+            <p class="subtitle" style="color: ghostwhite; align-content: center">
+                De esta forma, AMARTE contribuye a iluminar
+                la vida de un ser humano, exponiéndole a
+                grandes oportunidades, y conectándole con
+                gente altruista como usted.</p>
+        </article>
+        <article class="tile is-child notification is-warning">
+          <p class="title">Nace</p>
+          <p class="subtitle">El año 2019, con su primer proyecto
+              denominado, “Vuela, Sueños de Acuarelas”, el
+              cual presenta, una serie de exposiciones de
+              pinturas. Son 19 jóvenes que compartieron sus
+              historias personales, con sus desafíos superados y
+              grandes batallas ganadas, para realizar su sueño de
+              estudiar en la ESEN.</p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">Middle tile</p>
+          <p class="subtitle">With an image</p>
+          <figure class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/640x480.png">
+          </figure>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+            
         </section>
         
     </body>

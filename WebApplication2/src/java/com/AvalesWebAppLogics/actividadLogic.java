@@ -19,7 +19,7 @@ public class actividadLogic extends Logic
         DatabaseX database = getDatabase();
         
         ResultSet CResult = database.executeQuery("SELECT * "
-                + "FROM proyecto.actividades;");
+                + "FROM proyecto.actividades ORDER BY Año desc, Mes desc, Dia desc;");
         
         if(CResult!=null)
         {

@@ -4,25 +4,364 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
-        <title>AVALES</title>
+        
+        <title>AVALES </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Añadir los links para jar y bulma-->
+
+        <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/bulma/Style.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+
     </head>
     <body>
-        <h1>AVALES</h1>
-        <br><br>
-        <a href="ServletMainPage?formid=1">Ver proyectos de Avales</a>
-        <br><br>
-        <a href="ServletMainPage?formid=3" >Ver calendario de actividades</a>   
-        <br><br> 
-        <a href="register.jsp">Register</a>
-        <br><br>
-        <a href="login.jsp">Login</a>
-        <br><br>
-        <a href="loginAdmin.jsp">Login as Administrator</a>
-        <br><br>
+        <!-- ENCABEZADO--> 
+        <section class="hero is-light">
+            <!-- Hero head: will stick at the top -->
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
 
+                        <div class="navbar-brand">
+                            <div class="navbar-item">
+                                <a href="https://www.facebook.com/avales.sv" target="_blank">
+                                    <img src="styles/Imagenes/facebook.png" alt="logotipo"/>
+                                </a>
+                            </div>
+                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+
+                        <div class="navbar-brand">
+                            <div class="navbar-item">
+                                <a href="https://twitter.com/AVALES_SV" target="_blank">
+                                    <img src="styles/Imagenes/twitter.png" alt="logotipo"/>
+                                </a>
+                            </div>
+                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+
+                        <div id="navbarMenuHeroA" class="navbar-menu">
+                            <div class="navbar-end">
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="index.html">
+                                            <span>Inicio</span>
+                                        </a>
+                                    </div>
+                                </span> 
+
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="register.jsp">
+                                            <span>Registro</span>
+                                        </a>
+                                    </div>
+                                </span> 
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="login.jsp">
+                                            <span>Usuario</span>
+                                        </a>
+                                    </div>
+                                </span>
+
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <span class="icon">
+                                            <i class="fab"></i>
+                                        </span>
+                                        <a href="loginAdmin.jsp">Administración</a>
+                                    </div>
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Hero content: will be in the middle -->
+            <div class="hero-body">
+                <div class="container"> 
+                    <img src="styles/Encabezados/avales.png" alt=""/>
+                </div>
+            </div>
+
+                <!-- Hero footer: will stick at the bottom -->
+               
+                <div class="hero-foot">
+                    <nav class="tabs">
+                        <div class="container">
+                            <ul>
+                                <div id="navbarMenuHeroA" class="navbar-menu">
+                                    <span class="navbar-item">
+
+                                        <span class="navbar-item">
+                                            <div class="button is-primary is-inverted">
+                                                <a href="ServletMainPage?formid=1">
+                                                    <span>Proyectos</span>
+                                                </a>
+                                            </div>
+                                        </span>
+
+                                        <span class="navbar-item">
+                                            <div class="button is-primary is-inverted">
+                                                <a href="ServletMainPage?formid=3">
+                                                    <span>Calendario </span>
+                                                </a>
+                                            </div>
+                                        </span> 
+                                        
+                                        <span class="navbar-item">
+                                            <div class="button is-primary is-inverted">
+                                                <a href="RelacionesEstrategicas.jsp">
+                                                    <span>Relaciones Estratégicas </span>
+                                                </a>
+                                            </div>
+                                        </span> 
+                                        
+                                    </span>
+                                </div>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+        </section>
+ 
+        
+        <!--CUERPO-->
+
+        <div class="tile is-ancestor">
+            <div class="tile is-parent ">
+                <div class="tile is-child box">
+                    <p class="title"style="color: darkblue">¿Qué es AVALES?</p>
+                    <p style="color: gray">Somos una organización apolítica, no lucrativa, ni religiosa, creada el 09 de abril de 2012, como un movimiento que reúne a personas de diversos sectores de la sociedad, quienes desafiados por los problemas sociales que enfrentan adolescentes y jóvenes de nuestro país, se han comprometido a trabajar unidos para sembrar semillas de valores en las nuevas generaciones, con especial énfasis en la atención integral a la familia. Nuestros fines incluyen:</p>
+                    <br>
+                    <p style="color: gray">a) Fomentar la educación integral de las personas aplicando principios y valores éticos, desafiándoles a vivir responsablemente, practicando la integridad en todos los aspectos de su vida, a fin de generar una cultura de respeto y sana convivencia.</p>
+                    <br>
+                    <p style="color: gray">b) Generar una transformación socio espiritual positiva en las comunidades, a través de acciones como la educación integral de las nuevas generaciones, contribuyendo al desarrollo humano de las personas para construir una mejor sociedad.</p>
+                    <br>
+                    <p style="color: gray">c) Realizar acciones estratégicas de apoyo a sectores vulnerables de la sociedad con implementación de programas y realización de proyectos especializados en VALORES, EDUCACIÓN, SALUD, ARTE, DEPORTE, CULTURA Y AYUDA SOCIAL.</p>
+                    <br>
+                    <p style="color: gray">Con nuestro programa de Educación en Valores ESFAMILIA | INFLUYENTES contribuimos a fomentar la práctica de principios y valores éticos en cada individuo para activar su potencial personal a fin de generar una influencia positiva en su entorno.</p>
+                </div>
+
+                <div class="tile is-4 is-vertical is-parent">
+                    <div class="tile is-child box">
+                        <p class="title" style="color: darkblue">Misión</p>
+                        <p style="color: gray">Fomentar la práctica de principios y valores éticos en la sociedad salvadoreña.</p>
+                    </div>
+
+                    <div class="tile is-child box">
+                        <p class="title" style="color: darkblue">Visión</p>
+                        <p style="color: gray">El Salvador es una nación donde sus habitantes viven en justicia, paz, alegría y prosperidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Componentes de avales-->
+
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link href="styles/slider/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Demo styles -->
+    <style>
+      html, body {
+        position: relative;
+        height: 100%;
+      }
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 60%;
+        background: #000;
+      }
+      .swiper-slide {
+        font-size: 18px;
+        color:#fff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 40px 60px;
+      }
+      .parallax-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+      }
+      .swiper-slide .title {
+        font-size: 53px;
+        font-weight: 300;
+        font-family: var;
+      }
+      .swiper-slide .subtitle {
+        font-size: 23px;
+        font-style: inherit;
+      }
+      .swiper-slide .text {
+        font-size: 16px;
+        max-width: 400px;
+        line-height: 1.6;
+        font-style: oblique;
+      }
+
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="parallax-bg" style="background-image:url(styles/Imagenes/onda.png)" data-swiper-parallax="-23%"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0" style=" color: blue">Nuestra Acción de Valores</div>
+                <div class="subtitle" data-swiper-parallax="-200" style=" color: #00b0ff; font-family: serif; font-style: oblique;">para El Salvador</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p>Estamos generando una transformación
+                        socio espiritual positiva en las
+                        comunidades, a través de la educación
+                        de la familia con valores contribuyendo
+                        así al desarrollo humano integral de las
+                        personas; edificando juntos una mejor
+                        sociedad aplicando principios
+                        fundamentales de convivencia en
+                        beneficio de todos.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0" style=" color: blue">Educación Fundamental</div>
+                <div class="subtitle" data-swiper-parallax="-200" style=" color: #00b0ff; font-family: serif; font-style: oblique;">para una vida de éxito</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p>"El carácter de un hombre es su destino" (Heráclico)</p>
+                    <br>
+                    <p>Desde tiempos memorables se conocía la clave para el éxito, sin embargo, actualmente hacemos que los niños y jóvenes
+                    se concentren solamente en incrementar su conocimiento y desarrollar sus habilidades, no estarán preparados para una vida 
+                    satisfactoria como adultos. El logro en la vida exige mucho más.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0" style=" color: blue">La Fórmula</div>
+                <div class="subtitle" data-swiper-parallax="-200" style=" color: #00b0ff; font-family: serif; font-style: oblique;">¿Fracasos o logros?</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p> Conocimiento + Habilidades - Carácter = <strong style=" color: red">Fracasos</strong></p>
+                    <br>
+                    <p> Conocimiento + Habilidades + Carácter = <strong style=" color: gold">Logros</strong></p>
+                    <br>
+                    <p>Modelemos buenos valores para que todos aprendamos que además de conocimientos y habilidades,
+                    necesitamos cultivar nuestro carácter.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="styles/slider/swiper.min.js" type="text/javascript"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        speed: 600,
+        parallax: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    
+        <!-- PROYECTOS-->
+
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-12">
+                <div class="tile">
+
+                    <!--VALORES-->
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-light">
+                            <br>
+                            <br>
+                            <figure class="image is-3by3 is-center">
+                                <a href="VALORES.jsp">
+                                    <img src="styles/Imagenes/Valores-0001_Mesa de trabajo 1.png" alt="Logo"/>
+                                </a>
+                            </figure>
+                            <p class="subtitle" style="color:gray;text-align:center;font-size:100%;">Programa de formación en valores éticos y financieros para activar el potencial de las personas a fin de que asuman su responsabilidad personal para autogenerar su bienestar integral.</p>
+                        </article>
+                    </div>
+
+                    <!--ESFAMILIA-->
+                    <div class="tile is-parent">  
+                        <article class="tile is-child notification is-light">
+                            <figure class="image is-3by3">
+                                <a href="ESFAMILIA.jsp">
+                                    <img src="styles/Imagenes/2. ESFAMILIA.png" alt="Logo"/>
+                                </a>
+                            </figure>
+                            <p class="subtitle" style="color:gray;text-align:center;font-size:100%;">Beneficio Social en la Familia. La mejor solución a los problemas sociales que niñas, niños, adolescentes y jóvenes enfrentan, se encuentra en una sólida relación familiar donde los miembros de la familia se respetan y se aman unos a otros. Este ambiente saludable facilita el desarrollo integral de cada miembro de la familia.</p>
+                        </article>
+                    </div>
+
+                    <!--AMARTE-->
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-light">
+                            <br>
+                            <figure class="image is-3by3">
+                                <a href="Amarte.jsp">
+                                    <img src="styles/Imagenes/AMARTE-Eslogan.png" alt="Logo"/>
+                                </a>
+                            </figure>
+                            <p class="subtitle" style="color:gray;text-align:center;font-size:100%;">Programa transformador de perspectivas. Toma lo que conocemos como “arte” y lo trasciende a un nivel superior a los dibujos y pinturas demostrando que todos pueden ser artistas en su diario vivir.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

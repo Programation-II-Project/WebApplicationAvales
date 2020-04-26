@@ -62,38 +62,35 @@ public class messageLogic extends Logic
     public List<NewMensaje> getAllMensajesFromUser(int p_idUser)
     {
         ArrayList<NewMensaje> totalMensajes = null;
-            DatabaseX database = getDatabase();
+        DatabaseX database = getDatabase();
+        
+        ResultSet CResult = database.executeQuery("SELECT * FROM proyecto.mensajes where idUserFrom ="+p_idUser+";");
+        
+        if(CResult!=null)
+        {
+            int idUserFrom;
+            int idMensajeUserFrom;
+            String mensaje;
+            byte admin;
+            NewMensaje CTemp;
+            totalMensajes = new ArrayList<>();
             
-            ResultSet Cresult = database.executeQuery("SELECT * "
-                + "FROM proyecto.mensajes where idUserFrom ="+p_idUser+";");
-                
-                if(Cresult != null)
-                {
-     
-                    int idUserFrom;
-                    int idMensajeUserFrom;
-                    String mensaje;
-                    byte admin = 0;
-                    NewMensaje MTemp;
-                    totalMensajes = new ArrayList<>();
-                           
             try {
-                while(Cresult.next())
+                while(CResult.next())
                 {
-            
-                    idUserFrom = Cresult.getInt("IdUserFrom");
-                    idMensajeUserFrom = Cresult.getInt("IdMensajeUserFrom");
-                    mensaje = Cresult.getString("Mensaje");
+                    idUserFrom = CResult.getInt("IdUserFrom");
+                    idMensajeUserFrom = CResult.getInt("IdMensajeUserFrom");
+                    mensaje = CResult.getString("Mensaje");
+                    admin = CResult.getByte("AdminStatus");
                     
-                    MTemp = new NewMensaje(idUserFrom, idMensajeUserFrom, mensaje, admin);
-                    
-                    totalMensajes.add(MTemp);
-                    
+                    CTemp = new NewMensaje(idUserFrom, idMensajeUserFrom, mensaje, admin);
+                    totalMensajes.add(CTemp);
                 }
             } catch (SQLException ex) {
-                Logger.getLogger(messageLogic.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ayudaLogic.class.getName()).log(Level.SEVERE, null, ex);
             }
-                }
+            
+        }
         return totalMensajes;
     }
     

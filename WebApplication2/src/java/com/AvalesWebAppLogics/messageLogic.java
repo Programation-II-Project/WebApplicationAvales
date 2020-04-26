@@ -64,8 +64,7 @@ public class messageLogic extends Logic
         ArrayList<NewMensaje> totalMensajes = null;
         DatabaseX database = getDatabase();
         
-        ResultSet CResult = database.executeQuery("SELECT * "
-                + "FROM proyecto.mensajes where idUserFrom ="+p_idUser+";");
+        ResultSet CResult = database.executeQuery("SELECT * FROM proyecto.mensajes where idUserFrom ="+p_idUser+";");
         
         if(CResult!=null)
         {

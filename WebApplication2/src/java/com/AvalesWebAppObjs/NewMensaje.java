@@ -17,9 +17,12 @@ public class NewMensaje {
     
     public NewMensaje(int p_idUser, int p_idMessageUserFrom, String p_message, byte p_adminStatus)
     {
-        
+        setIdUser(p_idUser);
+        setIdMessageUserFrom(p_idMessageUserFrom);
+        setMessage(p_message);
+        setAdminStatus(p_adminStatus);
     }
-    public void setIdUser(int p_idUser)
+    private void setIdUser(int p_idUser)
     {
         idUser = p_idUser;
     }
@@ -27,7 +30,7 @@ public class NewMensaje {
     {
         return idUser;
     }
-    public void setIdMessageUserFrom(int p_idMessageUserFrom)
+    private void setIdMessageUserFrom(int p_idMessageUserFrom)
     {
         idMessageUserFrom = p_idMessageUserFrom;
     }
@@ -35,7 +38,7 @@ public class NewMensaje {
     {
         return idMessageUserFrom;
     }
-    public void setMessage(String p_Message)
+    private void setMessage(String p_Message)
     {
         message = p_Message;
     }
@@ -43,7 +46,7 @@ public class NewMensaje {
     {
         return message;
     }
-    public void setAdminStatus(byte p_AdminStatus)
+    private void setAdminStatus(byte p_AdminStatus)
     {
         adminStatus = p_AdminStatus;
     }

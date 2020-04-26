@@ -22,14 +22,14 @@ public class RegisterLoginServlet extends HttpServlet {
         if (stringform.equals("1")) 
         {
             String s_nombre = request.getParameter("f_nombre");
+            String s_email = request.getParameter("f_email");
+            String s_password = request.getParameter("f_password");
             String s_telefono = request.getParameter("f_telefono");
             String s_celular = request.getParameter("f_celular");
             String s_profesion = request.getParameter("f_profesion");
             String s_direccion = request.getParameter("f_direccion");
             String s_fecha = request.getParameter("f_fecha");
             String s_estatus = request.getParameter("f_estatus");
-            String s_email = request.getParameter("f_email");
-            String s_password = request.getParameter("f_password");
             
             String sa_familia = request.getParameter("f_familia");
             String sa_iglesia = request.getParameter("f_iglesia");

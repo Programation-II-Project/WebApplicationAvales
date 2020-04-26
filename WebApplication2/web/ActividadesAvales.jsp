@@ -10,7 +10,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+        <title>Actividades Avales</title>
     </head>
     <%
         actividadObj actividad = 
@@ -21,18 +23,22 @@
         
         
     %>
-    <body>
-        <h1><%= actividad.getNombre() %></h1>
+    <body style="background-color:#EAEAEA">
+        <div class="container is-fluid">
+            <h1 style="color:#170D61"><%= actividad.getNombre() %></h1>
         <br><br>
-        <h3><%= actividad.getDescripcion() %></h3><image src="<%= ruta_foto %>" />
+        <h3 style="color:#000000"><%= actividad.getDescripcion() %></h3><figure class="image is-128x128">
+                                                                        <image src="<%= ruta_foto %>" />
+                                                                        </figure>
         <br><br>
-        costo:<h2><%= actividad.getCosto() %></h2>
+        costo:<h2 style="color:#000000"><strong><%= actividad.getCosto() %></strong></h2>
         <br><br>
-        <button onclick="goBack()">Back</button>
+        <button style="color:#2D1CA9" class="button is-normal" onclick="goBack()"><strong>Back</strong></button>
         <script>
         function goBack() {
         window.history.back();
         }
         </script>
+        </div>
     </body>
 </html>

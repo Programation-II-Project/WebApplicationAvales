@@ -14,16 +14,16 @@
 
         <title>AYUDA</title>
     </head>
-        <body style="background-color:#0B184F"> 
+        <body style="background-color:#EAEAEA"> 
         <div class="container is-fluid">
-            <div style="color:#fff">
+            <div style="color:#000000">
             <h1>Llene el siguiente formulario para pedir ayuda especializada a AVALES</h1>
                 <form action="ServletUsuario" method="get">
                     Proyecto de Avales al que se quiere pedir ayuda: <div class="select is-small">
-                                                                     <select id="f_proyecto" name="f_proyecto">
-                                                                     <option value="VALORES">VALORES</option>
-                                                                     <option value="AMARTE">AMARTE</option>
-                                                                     <option value="ESFAMILIA">ESFAMILIA</option>
+                                                                     <select style="color:#5C4ADE" id="f_proyecto" name="f_proyecto">
+                                                                         <option value="VALORES"><strong>VALORES</strong></option>
+                                                                     <option value="AMARTE"><strong>AMARTE</strong></option>
+                                                                     <option value="ESFAMILIA"><strong>ESFAMILIA</strong></option>
                                                                      </select>
                                                                      </div>
             <br><br>
@@ -31,11 +31,11 @@
             <br><br>
             <textarea class="textarea is-normal" name="f_descripcion" rows="10" cols="40" maxlength="500" required placeholder="Escribe aquí tus comentarios"></textarea>
             <br><br>
-            <input class="button" type="submit" value="Create" />
+            <input style="color:#5C4ADE" class="button" type="submit" value="Create" />
             <input type="hidden" name="formid" value="1" />
         </form>
         <br><br>
-        <button class="button" onclick="goBack()">Back</button>
+        <button style="color:#5C4ADE" class="button" onclick="goBack()"><strong>Back</strong></button>
         <script>
         function goBack() {
         window.history.back();

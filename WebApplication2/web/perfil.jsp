@@ -25,9 +25,11 @@
         <br><br>
         <a href="ServletUsuario?formid=2">Ver tus solicitudes y administrarlas</a>
         <br><br>
-
-        <a href="Mensajeria.jsp">Ver mensajes</a>
-
+        <form action="ServletUsuario.java" name="formid" method="get">
+         
+            <a href="Mensajeria.jsp" type="submit" value="99" >Ver mensajes</a>
+        <input type="hidden" name="formid" value="99" />
+        </form>
         <a href="ServletUsuario?formid=6">Donaciones</a>
 
         <br><br>

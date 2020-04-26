@@ -1,25 +1,19 @@
 <%-- 
-    Document   : Mensajeria
-    Created on : 04-10-2020, 12:52:34 PM
+    Document   : chat
+    Created on : 04-25-2020, 02:26:56 PM
     Author     : fer10
 --%>
 
-<%@page import="com.AvalesWebAppObjs.nuevoRegistroObj"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="com.AvalesWebAppObjs.NewMensaje"%>
 <%@page import="java.util.List"%>
-<%@page import="java.util.List"%>
-<%@page import="com.AvalesWebAppLogics.messageLogic"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-     <%
+        <%
          List<NewMensaje> listaMensajes = 
-                (List<NewMensaje>)request.getSession().getAttribute("totalMensaje");
+                (List<NewMensaje>)request.getSession().getAttribute("listaMensajes");
           
     %>
     <body>
@@ -56,7 +50,7 @@
             Mensajes:
             <br><br>
             <input type="text" name="fl_newMessage"/>
-            <input type="hidden" name="formid" value="99" />
+            <input type="hidden" name="formid" value="100" />
             <input type="submit" value="Enviar">
             
             

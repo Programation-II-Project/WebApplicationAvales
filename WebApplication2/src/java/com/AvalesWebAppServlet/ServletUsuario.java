@@ -131,15 +131,29 @@ public class ServletUsuario extends HttpServlet
               
               boolean newMessage = CnewMessageL.insertMessage(user.getId(), p_count, s_newMessage, adminStatus);
               
-              List<NewMensaje> totalMensajes = CnewMessageL.getAllMensajesFromUser(user.getId());
               
-              request.getSession().setAttribute("totalMensaje", totalMensajes);
+              
+              
               request.getSession().setAttribute("message", newMessage);
                 request.getRequestDispatcher("Mensajeria.jsp")
                     .forward(request, response);
             }
-
             
+            if (stringform.equals("99"))
+            {
+                nuevoRegistroObj user = 
+                (nuevoRegistroObj)request.getSession().getAttribute("logged_user");
+                
+                 messageLogic CnewMessageL = new messageLogic();
+                
+                List<NewMensaje> totalMensajes = CnewMessageL.getAllMensajesFromUser(user.getId());
+                
+                request.getSession().setAttribute("listaMensajes", totalMensajes);
+                 request.getRequestDispatcher("chat.jsp")
+                .forward(request, response);
+            }
+            
+                
             if (stringform.equals("5"))
             {
                 solicitudAyudaObj ayudaActual = 

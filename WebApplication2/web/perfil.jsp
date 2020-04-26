@@ -26,7 +26,8 @@
         <a href="ServletUsuario?formid=2">Ver tus solicitudes y administrarlas</a>
         <br><br>
             <a href="Mensajeria.jsp" >Ver mensajes</a>
-        </form>
+            <br><br>
+               
         <a href="ServletUsuario?formid=6">Donaciones</a>
 
         <br><br>

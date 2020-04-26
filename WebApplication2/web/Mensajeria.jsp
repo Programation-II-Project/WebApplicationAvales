@@ -25,8 +25,7 @@
                 
                 List<NewMensaje> listaMensajes = CnewMessageL.getAllMensajesFromUser(user.getId());
          
-        // List<NewMensaje> listaMensajes = 
-             //   (List<NewMensaje>)request.getSession().getAttribute("totalMensajes");
+       
           
     %>
     <body onload="messageBox.fl_newMessage.focus"()>

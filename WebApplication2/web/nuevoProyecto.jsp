@@ -15,18 +15,21 @@
         <h1 style="color:#170D61">Crear nuevo proyecto</h1>
         <div style="color:#000000">
         <form action="ServletAdmin" method="get">
-            Nombre proyecto: <input type="text" name="proyecto" required/>
+            <div class="label">Nombre Proyecto</div>
+            <input class="input is-info" type="text" name="proyecto" required/>
             <br><br>
-            Descripción:
+            <div class="label">Descripción:</div>
             <br><br>
-            <textarea name="descripcion" rows="10" cols="40" maxlength="500" required></textarea>
+            <textarea class="textarea are-medium" name="descripcion" rows="10" cols="40" maxlength="500" required></textarea>
             <br><br>
-            Lugar:
-            <textarea name="lugar" rows="4" cols="40" maxlength="100" required></textarea>
+            <div class="label">Lugar:</div>
+            <textarea class="textarea are-medium" name="lugar" rows="4" cols="40" maxlength="100" required></textarea>
             <br><br>
-            Foto: <input type="text" name="foto" placeholder="Example.jpg" required/>
+            <div class="label">Foto:</div>
+            <input class="input is-info" type="text" name="foto" placeholder="Example.jpg" required/>
             <br><br>
-            Video: <input type="text" name="video" placeholder="Example.mp4" required/>
+            <div class="label">Video:</div>  
+            <input class="input is-info" type="text" name="video" placeholder="Example.mp4" required/>
             <br><br>
             <input class="button is-normal" style="color:#2D1CA9" type="submit" value="Create" />
             <input type="hidden" name="formid" value="6" />

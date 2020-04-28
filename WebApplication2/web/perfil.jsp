@@ -114,7 +114,7 @@
                   <div class="message-body" style=" background-color: lightgray ">
                       <div class="container has-text-centered">
                           <a href="ServletUsuario?formid=2">
-                      <img src="styles/Imagenes/Lista.png" alt="" style=" width: 40%; height: 40%;"/>
+                      <img src="styles/Imagenes/solicitudes.png" alt="" style=" width: 40%; height: 40%;"/>
                           </a>
                       <br>
                       <div class="subtitle" style=" color: darkblue; font-family: serif; font-style: italic;">
@@ -130,7 +130,7 @@
                   <div class="message-body" style=" background-color: lightgray ">
                       <div class="container has-text-centered">
                           <a href="ServletUsuario?formid=6">
-                      <img src="styles/Imagenes/Lista.png" alt="" style=" width: 40%; height: 40%;"/>
+                      <img src="styles/Imagenes/Corazon.png" alt="" style=" width: 40%; height: 40%;"/>
                           </a>
                       <br>
                       <div class="subtitle" style=" color: darkblue; font-family: serif; font-style: italic;">
@@ -157,6 +157,8 @@
               </article>
           </div>             
       </div>
+      
+      <br><br><br>
 
     </body>
 </html>

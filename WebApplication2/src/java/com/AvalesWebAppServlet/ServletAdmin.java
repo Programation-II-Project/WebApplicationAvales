@@ -3,6 +3,7 @@ package com.AvalesWebAppServlet;
 import com.AvalesWebAppLogics.actividadLogic;
 import com.AvalesWebAppLogics.ayudaLogic;
 import com.AvalesWebAppLogics.donacionesLogic;
+import com.AvalesWebAppLogics.messageLogic;
 import com.AvalesWebAppLogics.proyectoLogic;
 import com.AvalesWebAppLogics.registerLogic;
 import com.AvalesWebAppObjs.actividadObj;
@@ -10,9 +11,13 @@ import com.AvalesWebAppObjs.donacionObj;
 import com.AvalesWebAppObjs.nuevoRegistroObj;
 import com.AvalesWebAppObjs.proyectoObj;
 import com.AvalesWebAppObjs.solicitudAyudaObj;
+import com.AvalesWebAppObjs.usuariosMensaje;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -408,6 +413,36 @@ public class ServletAdmin extends HttpServlet {
                     .forward(request, response);
                 }
             }
+        if(stringform.equals("98"))
+        {
+           String s_idUser = request.getParameter("idUser");
+           int idUser = Integer.parseInt(s_idUser);
+           
+           request.getSession().setAttribute("idUser", idUser);
+           request.getRequestDispatcher("mensajeriaAdmin.jsp")
+           .forward(request, response);
+           
+              
+        }
+        if(stringform.equals("95"))
+        {
+           try {
+               String s_idUserFrom = request.getParameter("idUserFrom");
+               String adminMessage = request.getParameter("s_adminMessage");
+               int idUserFrom = Integer.parseInt(s_idUserFrom);
+               messageLogic messLogic = new messageLogic();
+               int p_count;
+               p_count = messLogic.getIdMessageUserFrom(idUserFrom).size() + 1;
+               messLogic.inserMessageAdmin(idUserFrom, adminMessage, p_count);
+           } catch (SQLException ex) {
+               Logger.getLogger(ServletAdmin.class.getName()).log(Level.SEVERE, null, ex);
+           }
+           
+                request.getRequestDispatcher("mensajeriaAdmin.jsp")
+                    .forward(request, response);
+            
+        }
+        
     }
     
 

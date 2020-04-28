@@ -8,6 +8,7 @@ package com.AvalesWebAppLogics;
 import balcorpfw.database.DatabaseX;
 import balcorpfw.logic.Logic;
 import com.AvalesWebAppObjs.NewMensaje;
+import com.AvalesWebAppObjs.usuariosMensaje;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -63,19 +64,20 @@ public class messageLogic extends Logic
     {
         ArrayList<NewMensaje> totalMensajes = null;
         DatabaseX database = getDatabase();
-        
+       
         ResultSet CResult = database.executeQuery("SELECT * FROM proyecto.mensajes where idUserFrom ="+p_idUser+";");
         
         if(CResult!=null)
         {
-            int idUserFrom;
-            int idMensajeUserFrom;
-            String mensaje;
-            byte admin;
-            NewMensaje CTemp;
-            totalMensajes = new ArrayList<>();
-            
             try {
+                int idUserFrom;
+                int idMensajeUserFrom;
+                String mensaje;
+                byte admin;
+                NewMensaje CTemp;
+                totalMensajes = new ArrayList<>();
+                
+                
                 while(CResult.next())
                 {
                     idUserFrom = CResult.getInt("IdUserFrom");
@@ -87,11 +89,89 @@ public class messageLogic extends Logic
                     totalMensajes.add(CTemp);
                 }
             } catch (SQLException ex) {
-                Logger.getLogger(ayudaLogic.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(messageLogic.class.getName()).log(Level.SEVERE, null, ex);
             }
+           
             
         }
         return totalMensajes;
     }
+    
+    public List<usuariosMensaje> getAllUserWithMessages()
+    {
+        ArrayList<usuariosMensaje> listaUsuarios = null;
+        
+        DatabaseX database = getDatabase();
+        
+        ResultSet Cresult = database.executeQuery("SELECT distinct proyecto.mensajes.idUserFrom, proyecto.mensajes.AdminStatus, proyecto.registros.Nombre  FROM proyecto.mensajes inner join proyecto.registros on proyecto.mensajes.idUserFrom = proyecto.registros.ID;");
+        
+        if(Cresult != null)
+        {
+            try {
+                int idUser;
+                String userName;
+                byte adminStatus;
+                usuariosMensaje CTemp;
+                listaUsuarios = new ArrayList<>();
+                
+                while(Cresult.next())
+                {
+                    
+                    idUser = Cresult.getInt("idUserFrom");
+                    adminStatus = Cresult.getByte("AdminStatus");
+                    userName = Cresult.getString("Nombre");
+                    CTemp = new usuariosMensaje(idUser, userName, adminStatus);
+                    listaUsuarios.add(CTemp);
+                    
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(messageLogic.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+        
+        
+        return listaUsuarios;
+    }
+    
+    public boolean inserMessageAdmin(int p_idUserFrom, String p_message, int p_idMessageUserFrom)
+    {
+        boolean messagehasfail;
+        byte p_AdminStatus = 1;
+        DatabaseX database = getDatabase();
+        messagehasfail = database.executeNonQueryBool("INSERT INTO proyecto.mensajes"
+            + "(idMensajes, IdUserFrom, IdMensajeUserFrom, Mensaje, AdminStatus) "
+            + "VALUES(0,'"+p_idUserFrom+"','"+p_idMessageUserFrom+"', '"+p_message+"','"+p_AdminStatus+"');");
+        
+    return messagehasfail;    
+        
+    }
+    public String getNameUserByIdUser(int p_idUser)
+    {
+        DatabaseX database = getDatabase();
+        
+        ResultSet CResult = database.executeQuery("SELECT * FROM proyecto.registros where ID ="+p_idUser+";");
+         String userName = null;
+        if(CResult != null)
+        {
+           
+            
+            try {
+                while(CResult.next())
+                {
+                    try {
+                        userName = CResult.getString("Nombre");
+                    } catch (SQLException ex) {
+                        Logger.getLogger(messageLogic.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(messageLogic.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+        return userName;
+    }
+    
     
 }

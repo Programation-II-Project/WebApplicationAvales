@@ -128,7 +128,7 @@ public class ServletUsuario extends HttpServlet
               messageLogic CnewMessageL = new messageLogic();
               int p_count;
               p_count = CnewMessageL.getIdMessageUserFrom(user.getId()).size() + 1;
-              boolean newMessage = false;
+              boolean newMessage = false; 
               if(s_newMessage.equals(""))
               {
                   

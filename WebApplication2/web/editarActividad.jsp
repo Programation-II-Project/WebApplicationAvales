@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Actividades</title>
     </head>
     <%
         actividadObj actividadEditar = 
@@ -39,11 +39,18 @@
             <input type="submit" value="Create" />
             <input type="hidden" name="formid" value="17" />
         </form>
-        <button onclick="goBack()">Back</button>
-        <script>
-        function goBack() {
-        window.history.back();
-        }
-        </script>
+            
+        <section class="container has-text-centered">
+            <div>
+                <button class="button is-info"onclick="goBack()">Volver</button>
+            </div>
+
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
+            <br><br><br>
+        </section>
     </body>
 </html>

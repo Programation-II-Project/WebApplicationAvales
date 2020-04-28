@@ -138,7 +138,23 @@
                   </div>
                   </div>
               </article>
-          </div>          
+          </div>    
+          
+          <div class="column">
+              <article class="message">
+                  <div class="message-body" style=" background-color: lightgray ">
+                      <div class="container has-text-centered">
+                          <a href="Mensajeria.jsp">
+                      <img src="styles/Imagenes/burbuja.png" alt="" style=" width: 40%; height: 40%;"/>
+                          </a>
+                      <br>
+                      <div class="subtitle" style=" color: darkblue; font-family: serif; font-style: italic;">
+                          Mensajería
+                      </div>
+                  </div>
+                  </div>
+              </article>
+          </div>             
       </div>
     </body>
 </html>

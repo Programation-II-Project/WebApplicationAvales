@@ -28,8 +28,8 @@
                     <div class="container">
                         <div class="navbar-brand">
                             <div class="navbar-item">
-                                <a href="https://instagram.com/amarte_sv?r=nametag" target="_blank">
-                                    <img src="styles/Imagenes/In1.png" alt="logotipo"/>
+                                <a href="https://www.facebook.com/avales.sv" target="_blank">
+                                    <img src="styles/Imagenes/facebook.png" alt="logotipo"/>
                                 </a>
                             </div>
                             <span class="navbar-burger burger" data-target="navbarMenuHeroA">
@@ -41,8 +41,8 @@
 
                         <div class="navbar-brand">
                             <div class="navbar-item">
-                                <a href="https://www.facebook.com/amarte.sv/" target="_blank">
-                                    <img src="styles/Imagenes/Fe1.png" alt="logotipo"/>
+                                <a href="https://twitter.com/AVALES_SV" target="_blank">
+                                    <img src="styles/Imagenes/twitter.png" alt="logotipo"/>
                                 </a>
                             </div>
                             <span class="navbar-burger burger" data-target="navbarMenuHeroA">
@@ -50,20 +50,7 @@
                                 <span></span>
                                 <span></span>
                             </span>
-                        </div>
-
-                        <div class="navbar-brand">
-                            <div class="navbar-item">
-                                <a href="https://twitter.com/AmArte_sv" target="_blank">
-                                    <img src="styles/Imagenes/Tw1.png" alt="logotipo"/>
-                                </a>
-                            </div>
-                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </div>
+                        </div>                        
 
                         <div id="navbarMenuHeroA" class="navbar-menu">
                             <div class="navbar-end">

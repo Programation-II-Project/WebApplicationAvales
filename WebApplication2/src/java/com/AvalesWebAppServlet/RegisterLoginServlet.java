@@ -49,7 +49,7 @@ public class RegisterLoginServlet extends HttpServlet {
             
             String s_facebook = request.getParameter("f_facebook");
             String s_twitter = request.getParameter("f_twitter");
-
+       
             registerLogic CLogic = new registerLogic();
             boolean bHasFailed = CLogic.insertRegister(s_nombre,s_telefono,s_celular,s_profesion,
                     s_direccion, s_fecha, s_estatus, s_email, s_familia, s_iglesia, s_estado, s_mc,

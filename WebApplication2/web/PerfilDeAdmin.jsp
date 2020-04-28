@@ -22,6 +22,8 @@
         <br><br>
         <a href="ServletAdmin?formid=10">Ver donaciones</a>
         <br><br> 
+        <a href="bandejaEntradaAdmin.jsp">Bandeja de Mensajes</a>
+        <br><br>
         <a href="index.html">Volver a Avales</a>
     </body>
 </html>

@@ -25,6 +25,7 @@
         nuevoRegistroObj user
                 = (nuevoRegistroObj) request.getSession().getAttribute("logged_user");
     %>
+
     <body>
 
         <!-- ENCABEZADO--> 
@@ -156,5 +157,6 @@
               </article>
           </div>             
       </div>
+
     </body>
 </html>

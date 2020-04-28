@@ -12,18 +12,40 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Solicitudes de ayuda</title>
+        
+        <!-- Añadir los links para jar y bulma-->
+
         <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
-        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+        <link href="styles/bulma/Style.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>         
+        
     </head>
     <%
         List<solicitudAyudaObj> listaDeAyudas = 
                 (List<solicitudAyudaObj>)request.getSession().getAttribute("listaTotal");
     %>
     <body>
-        <h1>Hello World!</h1>
+        
+            <!-- SEPARADOR -->
+        
+            <section class="hero is-dark">
+                <div class="hero-body" style=" background-image: url(styles/Imagenes/bg4.jpg)">
+
+                    <div class="container has-text-centered">
+                        <h1 class="title" style=" align-content: center; font-family: sans-serif; font-style: inherit; color: gold">
+                            Bienvenido/a administrador
+                        </h1>
+                        <h2 class="subtitle" style=" align-content: center; font-family: initial; font-style: oblique; color: white">
+                            Estas son las solicitudes de ayuda recibidas 
+                        </h2>
+                    </div>
+                </div>
+            </section>
+            
         <br><br>
-         <table style="width:50%" border="1">
+        
+        <table class="table is-fullwidth">
             <tr>
                 <th>ID del usuario</th>
                 <th>Proyecto</th>
@@ -76,7 +98,14 @@
                 }
             %>
         </table>
-        <br><br> 
-        <a href="PerfilDeAdmin.jsp">Back</a>
+        <br><br>
+        
+          <div class="buttons is-centered">
+              <a href="PerfilDeAdmin.jsp">
+              <button class="button is-info">Volver</button>
+              </a>
+          </div> 
+        <br><br>
+
     </body>
 </html>

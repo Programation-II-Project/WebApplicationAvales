@@ -2,7 +2,7 @@
   width: 330px;
 }
 .cld-main a{
-  color: #333;
+  color: #0091ea;
   font-weight: bold;
 }
   .cld-datetime{
@@ -54,7 +54,7 @@
     height: 20px;
     width: 20px;
     border-radius: 50px;
-    background: #666;
+    background: #0056b3;
     color: #fff;
   }
   .cld-day.disableDay{
@@ -104,7 +104,7 @@
       }
       .cld-number.eventday:hover{
         cursor: pointer;
-        background: #eee;
+        background: #eee ;
       }
       .today .cld-number.eventday:hover{
         background: #888;

@@ -95,14 +95,14 @@
                                 <div class="field">
                                     <label class="label">Número de la Tarjeta:</label>
                                     <div class="control">
-                                        <input class="input" type="number" name="tarjeta" rows="1" cols="14" maxlength="14" required><%= donation.getTarjeta()%></div>
+                                        <input class="input" type="number" name="tarjeta" rows="1" cols="14" maxlength="14" required>Habias puesto: <%= donation.getTarjeta()%></div>
                                 </div>
 
                                 <br>                                
                                 <div class="field">
                                     <label class="label">CVV:</label>
                                     <div class="control">
-                                        <input class="input" type="number" name="CVV" required rows="1" cols="6" maxlength="4" required><%= donation.getCVV()%></div>
+                                        <input class="input" type="number" name="CVV" required rows="1" cols="6" maxlength="4" required>Habías puesto: <%= donation.getCVV()%></div>
                                 </div>
 
                                 <br>

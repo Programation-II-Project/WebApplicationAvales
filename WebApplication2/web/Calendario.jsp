@@ -20,7 +20,7 @@
         int dia = 0;
         int mes = 0;
         int anno = 0;
-        String Titulo = "Naniiiiii!";
+        String Titulo = "";
     %>
     <body>
 

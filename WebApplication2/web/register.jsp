@@ -198,7 +198,9 @@
                                  <div class="control">
                                     <input class="input" type="password" name="f_password" placeholder="Ingrese su contraseña" required>
                                  </div>
+
                             </div>                            
+
                             
                             <div class="field">                               
                                 <div class="field-body">

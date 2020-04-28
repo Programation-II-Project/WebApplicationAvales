@@ -9,7 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-                <!-- Añadir los links para jar y bulma-->
+
+        <title>Nueva Actividad</title>
+
+        <!-- Añadir los links para jar y bulma-->
 
         <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
         <link href="styles/bulma/Style.css" rel="stylesheet" type="text/css"/>
@@ -17,55 +20,6 @@
 
     </head>
     <body>
-        
-
-        <!-- ENCABEZADO--> 
-        <section class="hero is-light">
-            <!-- Hero head: will stick at the top -->
-            <div class="hero-head">
-                <nav class="navbar">
-                    <div class="container">
-
-                        <div class="navbar-brand">
-                            <div class="navbar-item">
-                                <a href="https://www.facebook.com/avales.sv" target="_blank">
-                                    <img src="styles/Imagenes/facebook.png" alt="logotipo"/>
-                                </a>
-                            </div>
-                            <span class="navbar-burger burger" data-target="navbarMenuHeroA"></span>
-                        </div>
-
-                        <div class="navbar-brand">
-                            <div class="navbar-item">
-                                <a href="https://twitter.com/AVALES_SV" target="_blank">
-                                    <img src="styles/Imagenes/twitter.png" alt="logotipo"/>
-                                </a>
-                            </div>
-                            <span class="navbar-burger burger" data-target="navbarMenuHeroA"></span>
-                        </div>
-
-                        <div id="navbarMenuHeroA" class="navbar-menu">
-                            <div class="navbar-end">
-                                <span class="navbar-item">
-                                    <div class="button is-primary is-inverted">
-                                        <a href="index.html">
-                                            <span>Inicio</span>
-                                        </a>
-                                    </div>
-                                </span> 
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <!-- Hero content: will be in the middle -->
-            <div class="hero-body">
-                <div class="container"> 
-                    <img src="styles/Encabezados/avales.png" alt=""/>
-                </div>
-            </div>
-        </section>
-
         <!-- SEPARADOR -->
 
         <section class="hero is-dark">
@@ -73,55 +27,110 @@
 
                 <div class="container has-text-centered">
                     <h1 class="title" style=" align-content: center; font-family: sans-serif; font-style: inherit; color: gold">
-                        Descripción de la Actividad
+                        Nueva actividad
                     </h1>
                     <h2 class="subtitle" style=" align-content: center; font-family: initial; font-style: oblique; color: white">
-                        
+
                     </h2>
                 </div>
             </div>
         </section>      
 
 
-<!-- Actividad -->
-<section class="container has-text-centered">
-        <h1>Actividad</h1>
-        <form action="ServletAdmin" method="get">
-            Nombre de la actividad: <input type="text" name="Nombre" autocomplete="off" required/>
-            <br><br>
-            Descripcion:
-            <br><br>
-            <textarea name="Descripcion" rows="10" cols="40" maxlength="400" required>Descripcion de la actividad (Recuerda agregar la hora)</textarea>
-            <br><br>
-            Encargado: <input type="text" name="Encargado" autocomplete="off" required/>
-            <br><br>
-            Costo de la actividad: <input type="number" step="any" name="Costo" required/>
-            <br><br>
-            Año: <input type="number" name="Anno" required/>
-            <br><br>
-            Mes: <input type="number" min="1" max="12" name="Mes" required/>
-            <br><br>
-            Dia: <input type="number" min="1" max="31" name="Dia" required/>
-            <br><br>
-            Banner: <input type="text" name="Banner" placeholder="NombreDeLaFoto.jpg" required/> 
-            <input type="submit" value="Create" />
-            <input type="hidden" name="formid" value="14" />
-        </form>
-        <br><br>
-        
+        <!-- Actividad -->
 
-        <section class="container has-text-centered">
-            <div>
-                <button class="button is-info"onclick="goBack()">Volver</button>
+        <br>
+        <div class="columns">
+            <div class="column">
+            <div class="column is-centered">
+                <div class="container">
+                    <div class="notification"> 
+                        <form action="ServletAdmin" method="get">
+
+                            <div class="field">
+                                <label class="label">Nombre de la actividad:</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="Nombre" required/>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="field">
+                                <label class="label">Descripción:</label>
+                                <div class="control">
+                                    <textarea name="Descripcion" class="textarea is-focused" placeholder="Descripción de la actividad (incluyendo la hora)" rows="10" cols="40" maxlength="400" required></textarea>
+                                </div>
+                            </div> 
+                            <br>
+                            <div class="field">
+                                <label class="label">Encargado:</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="Encargado" required/>
+                                </div>
+                            </div>                            
+                            <br>
+                            <div class="field">
+                                <label class="label">Costo de la Actividad:</label>
+                                <div class="control">
+                                    <input class="input" type="number" step="any" name="Costo" required/>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="field">
+                                <label class="label">Año:</label>
+                                <div class="control">
+                                    <input class="input" type="number" name="Anno" required/>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="field">
+                                <label class="label">Mes:</label>
+                                <div class="control">
+                                    <input class="input" type="number" min="1" max="12" name="Mes" required/>
+                                </div>
+                            </div>            
+                            <br>
+                            <div class="field">
+                                <label class="label">Día:</label>
+                                <div class="control">
+                                    <input class="input" type="number" min="1" max="31" name="Dia" required/>
+                                </div>
+                            </div>            
+                            <br>
+                            <div class="field">
+                                <label class="label">Banner:</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="Banner" placeholder="NombreDeLaFoto.jpg" required/>
+                                </div>
+                            </div>            
+
+                            <div id="navbarMenuHeroA" class="navbar-menu">
+                                <div class="navbar-end">
+                                    <span class="navbar-item">
+                                        <input class="button is-link" type="submit" value="Create"/>
+                                        <input type="hidden" name="formid" value="14" />
+                                    </span> 
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="button is-info"onclick="goBack()">Volver</button>
+                            </div>
+
+                            <script>
+                                function goBack() {
+                                    window.history.back();
+                                }
+                            </script>                            
+                        </form>
+                    </div>
+                </div>
+
             </div>
+        </div>
+    </div>
 
-            <script>
-                function goBack() {
-                    window.history.back();
-                }
-            </script>
-            <br><br><br>
-        </section>
-</section>
-    </body>
+
+    <br><br>
+</body>
 </html>

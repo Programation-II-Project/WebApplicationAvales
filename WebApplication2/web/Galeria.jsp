@@ -89,6 +89,14 @@
                                         <a href="loginAdmin.jsp">Administración</a>
                                     </div>
                                 </span>
+                                
+                                <span class="navbar-item">
+                                    <div class="button is-primary is-inverted">
+                                        <a href="Amarte.jsp">
+                                            <span>Volver</span>
+                                        </a>
+                                    </div>
+                                </span>                                
 
 
                             </div>

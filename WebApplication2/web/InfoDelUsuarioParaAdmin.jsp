@@ -10,7 +10,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Administrador</title>
+        
+        <!-- Añadir los links para jar y bulma-->
+
+        <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/bulma/Style.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>        
     </head>
     <%
         nuevoRegistroObj infoUser = 
@@ -30,12 +36,28 @@
 
     %>
     <body>
-        <h1>Información del usuario</h1>
+        
+            <!-- SEPARADOR -->
+        
+            <section class="hero is-dark">
+                <div class="hero-body" style=" background-image: url(styles/Imagenes/bg4.jpg)">
+
+                    <div class="container has-text-centered">
+                        <h1 class="title" style=" align-content: center; font-family: sans-serif; font-style: inherit; color: gold">
+                            Información de Administrador
+                        </h1>
+
+                    </div>
+                </div>
+            </section>
+        
         <br><br>
-        <a>Nombre: </a>
+        <section class="container">
+        <h1 class="title" style="color: darkblue; font-family: serif; font-style: oblique;">Información General:</h1>
+        <a style="color: darkblue"><strong>Nombre:</strong> </a>
         <a><%= infoUser.getNombre() %> </a>
         <br><br>
-        <a>Telefono de su casa: </a>
+        <a style="color: darkblue"><strong>Telefono de su casa:</strong> </a>
         <%    
                 if(telefono.equals(""))
                 {
@@ -51,25 +73,25 @@
                 }
         %>
         <br><br>
-        <a>Celular: </a>
+        <a style="color: darkblue"><strong>Celular:</strong> </a>
         <a><%= infoUser.getCelular() %> </a>
         <br><br>
-        <a>Profesión: </a>
+        <a style="color: darkblue"><strong>Profesión:</strong> </a>
         <a><%= infoUser.getProfesion() %> </a>
         <br><br>
-        <a>Dirección: </a>
+        <a style="color: darkblue"><strong>Dirección:</strong> </a>
         <a><%= infoUser.getDireccion() %> </a>
         <br><br>
-        <a>Fecha de nacimiento: </a>
+        <a style="color: darkblue"><strong>Fecha de nacimiento:</strong> </a>
         <a><%= infoUser.getFecha() %> </a>
         <br><br>
-        <a>Estado civil: </a>
+        <a style="color: darkblue"><strong>Estado civil:</strong> </a>
         <a><%= infoUser.getEstado_civil() %> </a>
         <br><br>
-        <a>Email: </a>
+        <a style="color: darkblue"><strong>Email:</strong> </a>
         <a><%= infoUser.getEmail() %> </a>
         <br><br>
-        <a>Facebook: </a>
+        <a style="color: darkblue"><strong>Facebook:</strong> </a>
         <%    
                 if(fb.equals(""))
                 {
@@ -85,7 +107,7 @@
                 }
         %>
         <br><br>
-        <a>Twitter: </a>
+        <a style="color: darkblue"><strong>Twitter:</strong> </a>
         <%  
                 if(tw.equals(""))
                 {
@@ -100,8 +122,9 @@
         <%
                 }
         %>
-        <br><br>
-        <h4>Áreas de influencia:</h4>
+        <br><br><br>
+        <h4 class="title" style="color: darkblue; font-family: serif; font-style: oblique;">Áreas de Influencia:</h4>
+        
         <%    
             if(familia+iglesia+gobierno+mc+educacion+economia+arte==0)
             {
@@ -176,15 +199,18 @@
             }
         %>
         
-        
         <br><br>
-        <button onclick="goBack()">Back</button>
+        
+        <div>
+            <button class="button is-info is-centered"onclick="goBack()">Volver</button>
+        </div>
+
         <script>
-        function goBack() {
-        window.history.back();
-        }
-        </script>
-        
-        
+            function goBack() {
+                window.history.back();
+            }
+        </script>        
+        </section>
+        <br><br>
     </body>
 </html>

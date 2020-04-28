@@ -106,11 +106,6 @@
             <div class="control">
                 <textarea name="f_descripcion" class="textarea is-focused"  placeholder="Describe la ayuda que solicitas" rows="10" cols="40"></textarea>
             </div>
-            
-            
-            <!--<textarea name="f_descripcion" rows="10" cols="40" maxlength="500" required>Escribe aquí tus comentarios</textarea>
-            <br><br> -->
-
             <div class="container">
                 <div id="navbarMenuHeroA" class="navbar-menu">
                     <div class="navbar-end">

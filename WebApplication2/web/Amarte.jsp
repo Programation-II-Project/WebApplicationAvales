@@ -151,41 +151,61 @@
             </div>
 
             <!-- INFO -->
-
-<div class="tile is-ancestor">
-  <div class="tile is-4 is-vertical is-parent">
-    <div class="tile is-child box" style=" background-image: url(styles/Imagenes/back.png)">
-        <p class="title has-text-centered" style="color: #002752; font-family: var; font-style: oblique">Nace</p>
-      <p>El año 2019, con su primer proyecto 
-          denominado, “Vuela, Sueños de Acuarelas”, el
-          cual presenta, una serie de exposiciones de
-          pinturas. Son 19 jóvenes que compartieron sus
-          historias personales, con sus desafíos superados y
-          grandes batallas ganadas, para realizar su sueño de
-          estudiar en la ESEN.</p>
-    </div>
-    <div class="tile is-child box" style=" background-image: url(styles/Imagenes/back.png)">
-      <p class="title has-text-centered" style="color: #002752; font-family: var; font-style: oblique">Nace</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-    </div>
-  </div>
-  <div class="tile is-parent">
-    <div class="tile is-child box" style=" background-image: url(styles/Imagenes/back.png)">
-        <p class="title has-text-centered" style="color: #002752; font-family: var; font-style: oblique">¿Qué es?</p>
-      <p>Es un programa de beneficio social
-      respaldado por AVALES, que impulsa, a través
-      de las artes plásticas crear obras artísticas
-      inspiradas en diversas historias de seres
-      humanos con gran potencial para motivar a
-      otros, a fin de promover la autosuperación.</p>
-      <p>De esta forma, AMARTE contribuye a iluminar
-          la vida de un ser humano, exponiéndole a
-          grandes oportunidades, y conectándole con
-          gente altruista como usted.</p>
+            <section class="container">
+            <div class="tile is-ancestor">
+                <div class="tile is-4 is-vertical is-parent">
+                    <div class="tile is-child box" style=" background-image: url(styles/Imagenes/back.png)">
+                        <p class="title has-text-centered" style="color: #002752; font-family: var; font-style: oblique">Nace</p>
+                        <p>El año 2019, con su primer proyecto 
+                            denominado, “Vuela, Sueños de Acuarelas”, el
+                            cual presenta, una serie de exposiciones de
+                            pinturas. Son 19 jóvenes que compartieron sus
+                            historias personales, con sus desafíos superados y
+                            grandes batallas ganadas, para realizar su sueño de
+                            estudiar en la ESEN.</p>
+                    </div>
+                    <div class="tile is-child box" style=" background-image: url(styles/Imagenes/back.png)">
+                        <p class="title has-text-centered" style="color: #002752; font-family: var; font-style: oblique">Actualmente</p>
+                        <p>Estamos apoyando a 20 jóvenes estudiantes
+                            de la Escuela Superior de Economía y Negocios (ESEN), ellos
+                            están ahí gracias a becas y personas que vieron a bien ayudarles
+                            a ingresar, sin embargo ser estudiantes de la ESEN requiere más
+                            que la colegiatura. Amarte, se enfoca en sanar el dolor que otras
+                            necesidades provocan y de no hacerlo pueden ser el motivo de
+                            acabar con ese sueño. </p>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box" style=" background-image: url(styles/Imagenes/back.png)">
+                        <p class="title has-text-centered" style="color: #002752; font-family: var; font-style: oblique">¿Qué es?</p>
+                        <p>Es un programa transformador de perspectivas. Toma lo
+                            que conocemos como “arte” y lo trasciende a un nivel superior
+                            a los dibujos y pinturas demostrando que todos pueden ser
+                            artistas en su diario vivir.
+                        </p><br>
+                        <p>AmArte es el lienzo para exponer la historia de jóvenes
+                            con gran potencial a la oportunidad de sus vidas, desarrolla,
+                            concecta, acompaña e impulsa. Por medio de obras de arte,
+                            inspiradas en la vida de ellos, busca inspirar y causar un
+                            impacto positivo y significativo en la vida de ellos, para que así
+                            puedan dar su aporte de bienestar a los que los rodean y a su
+                            sociedad. Acciona en tres áreas fundamentals para los
+                            beneficiados: Actitud, Experiencia y Apoyo. </p><br>
+                        <p>Esto no es únicamente una ayuda más,
+                            también adquiere la función de un seguro de inversión. Se encarga
+                            de garantizar que todo esfuerzo económico, de tiempo, becas y
+                            donaciones valgan la pena y den el resultado esperado, ver a un
+                            joven convertirse en un excelente profesional. </p><br>
+                        <p>Todo es posible gracias a personas con el corazón para
+                            creer y ayudar, ahora es tu oportunidad de unirte. Conoce,
+                            sorpréndete y forma parte del cambio de vida de jóvenes que
+                            están luchando por ser personas de bien.</p>
+                        
 
     </div>
   </div>
 </div>
+            </section>
         </section>
     </body>
 </html>

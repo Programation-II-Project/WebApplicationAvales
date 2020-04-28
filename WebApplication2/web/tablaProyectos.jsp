@@ -12,22 +12,39 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Proyectos</title>
         <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
         <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+        
+        <!-- Añadir los links para jar y bulma-->
+
+        <link href="styles/bulma/bulma.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/bulma/Style.css" rel="stylesheet" type="text/css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>         
     </head>
     <%
         List<proyectoObj> totalProyectos = 
                 (List<proyectoObj>)request.getSession().getAttribute("listaTotalProyectos");
     %>
     <body>
-        <h1>Proyectos</h1><br><br>
-        <br><br>
-        <a href="nuevoProyecto.jsp" >Crear un nuevo proyecto</a>
+        
+            <!-- SEPARADOR -->
+        
+            <section class="hero is-dark">
+                <div class="hero-body" style=" background-image: url(styles/Imagenes/bg4.jpg)">
+
+                    <div class="container has-text-centered">
+                        <h1 class="title" style=" align-content: center; font-family: sans-serif; font-style: inherit; color: gold">
+                            Proyectos en curso
+                        </h1>
+                    </div>
+                </div>
+            </section>        
         <br><br> 
-         <table style="width:50%" border="1">
+        <section class="container">
+        <table class="table is-striped">
             <tr>
-                <th>Nombre del proyecto</th>
+                <th>Proyecto</th>
                 <th>Descripcion</th>
                 <th>Lugar</th>
                 <th>Foto</th>
@@ -66,7 +83,24 @@
                 }
             %>
         </table>
+        </section>
+        
         <br><br>
-        <a href="PerfilDeAdmin.jsp" >Back</a>
+        <section class=" container is-centered">
+          <div class="buttons is-centered">
+              <a href="nuevoProyecto.jsp">
+              <button class="button is-info">Crear un nuevo proyecto</button>
+              </a>
+          </div> 
+
+        <br>
+        
+          <div class="buttons is-centered">
+              <a href="PerfilDeAdmin.jsp">
+              <button class="button is-info">Volver</button>
+              </a>
+          </div> 
+        <br><br>
+        </section>
     </body>
 </html>

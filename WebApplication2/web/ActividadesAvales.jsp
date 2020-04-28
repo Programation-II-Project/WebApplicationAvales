@@ -88,20 +88,25 @@
     </div>
   </div>
   </section>
+            <!--INFO-->
+            <br><br>
+      <section class="container has-text-centered">
+        <h1 class="title" style=" align-content: center; font-family: sans-serif; font-style: inherit; color: darkblue"><%= actividad.getNombre() %></h1>
+        <h3 class="subtitle" style=" align-content: center; font-family: initial; font-style: oblique; color: blue"><%= actividad.getDescripcion() %></h3><image src="<%= ruta_foto %>" style="width: 50%; height: 50%"/>
+        <br><br>
+        <h class="subtitle" style=" align-content: center; font-family: initial; font-style: oblique; color: blue">costo: <%= actividad.getCosto() %></h>
+        <br><br>
+        
+            <div>
+                <button class="button is-info"onclick="goBack()">Volver</button>
+            </div>
 
-      <section class="container">
-        <h1><%= actividad.getNombre() %></h1>
-        <br><br>
-        <h3><%= actividad.getDescripcion() %></h3><image src="<%= ruta_foto %>" />
-        <br><br>
-        costo:<h2><%= actividad.getCosto() %></h2>
-        <br><br>
-        <button onclick="goBack()">Back</button>
-        <script>
-        function goBack() {
-        window.history.back();
-        }
-        </script>
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>        
       </section>
+        <br><br><br>
     </body>
 </html>

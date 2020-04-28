@@ -104,7 +104,7 @@
             </div>
             <br><br><br><br>
             <div class="control">
-                <textarea name="f_descripcion" class="textarea is-focused" placeholder="Describe la ayuda que solicitas" rows="10" cols="40"></textarea>
+                <textarea name="f_descripcion" class="textarea is-focused"  placeholder="Describe la ayuda que solicitas" rows="10" cols="40"></textarea>
             </div>
             
             

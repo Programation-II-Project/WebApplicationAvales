@@ -182,14 +182,14 @@
                             <div class="field">
                                 <label class="label">Nombre</label>
                                 <div class="control">
-                                    <input class="input" type="text" name="f_nombre" placeholder="Ingrese su nombre" required>
+                                    <input class="input" type="text" name="f_nombre" autocomplete="off" placeholder="Ingrese su nombre" required>
                                 </div>
                             </div>
                             
                             <div class="field">
                                 <label class="label">Email</label>
                                  <div class="control">
-                                    <input class="input" type="text" name="f_email" placeholder="Ingrese su Email" required>
+                                    <input class="input" type="text" name="f_email" autocomplete="off" placeholder="Ingrese su Email" required>
                                  </div>
                             </div>
                             
@@ -212,13 +212,13 @@
                                   <div class="field">
                                       <label class="label">Teléfono de casa</label>
                                       <p class="control is-expanded">
-                                        <input class="input" type="text" name="f_telefono" placeholder="Ingrese su número telefónico de casa">
+                                          <input class="input" type="text" name="f_telefono" autocomplete="off" placeholder="Ingrese su número telefónico de casa">
                                       </p>
                                   </div>     
                                   <div class="field">
                                     <label class="label">Teléfono celular</label>
                                     <p class="control is-expanded">
-                                        <input class="input" type="text" name="f_celular" placeholder="Ingrese su número de teléfono celular" required>   
+                                        <input class="input" type="text" name="f_celular" autocomplete="off" placeholder="Ingrese su número de teléfono celular" required>   
                                     </p>
                                   </div>
                                 </div>
@@ -227,21 +227,21 @@
                             <div class="field">
                                 <label class="label">Profesión</label>
                                  <div class="control">
-                                    <input class="input" type="text" name="f_profesion" placeholder="Ingrese su profesión" required>
+                                    <input class="input" type="text" name="f_profesion" autocomplete="off" placeholder="Ingrese su profesión" required>
                                  </div>
                             </div>
                             
                             <div class="field">
                                 <label class="label">Dirección</label>
                                  <div class="control">
-                                    <input class="input" type="text" name="f_direccion" placeholder="Ingrese su dirección" required>
+                                    <input class="input" type="text" name="f_direccion" autocomplete="off" placeholder="Ingrese su dirección" required>
                                  </div>
                             </div>
                             
                             <div class="field">
                                 <label class="label">Fecha de nacimiento</label>
                                  <div class="control">
-                                    <input class="input" type="date" name="f_fecha" placeholder="Ingrese su fecha de nacimiento" required>
+                                    <input class="input" type="date" name="f_fecha" autocomplete="off" placeholder="Ingrese su fecha de nacimiento" required>
                                  </div>
                             </div> 
                             
@@ -261,14 +261,14 @@
                             <div class="field">
                                 <label class="label">Facebook</label>
                                  <div class="control">
-                                    <input class="input" type="text" name="f_facebook" placeholder="Ingrese su usuario de facebook">
+                                    <input class="input" type="text" name="f_facebook" autocomplete="off" placeholder="Ingrese su usuario de facebook">
                                  </div>
                             </div>
                             
                             <div class="field">
                                 <label class="label">Twitter</label>
                                  <div class="control">
-                                    <input class="input" type="text" name="f_twitter" placeholder="Ingrese su usuario de twetter">
+                                    <input class="input" type="text" name="f_twitter" autocomplete="off" placeholder="Ingrese su usuario de twetter">
                                  </div>
                             </div>
                           

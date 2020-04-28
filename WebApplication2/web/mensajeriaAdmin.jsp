@@ -70,7 +70,7 @@
         
         <form action="ServletAdmin" method="get">
             
-            <input type="text" name="s_adminMessage" autocomplete="off">
+            <input type="text" name="s_adminMessage" autofocus="on" autocomplete="off">
             <input type="hidden" name="idUserFrom" value="<%=idUserFrom %>">
             <input type="hidden" name="formid" value="95">
             <input type="submit" value="Enviar">

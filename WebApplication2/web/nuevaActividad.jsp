@@ -87,13 +87,13 @@
 <section class="container has-text-centered">
         <h1>Actividad</h1>
         <form action="ServletAdmin" method="get">
-            Nombre de la actividad: <input type="text" name="Nombre" required/>
+            Nombre de la actividad: <input type="text" name="Nombre" autocomplete="off" required/>
             <br><br>
             Descripcion:
             <br><br>
             <textarea name="Descripcion" rows="10" cols="40" maxlength="400" required>Descripcion de la actividad (Recuerda agregar la hora)</textarea>
             <br><br>
-            Encargado: <input type="text" name="Encargado" required/>
+            Encargado: <input type="text" name="Encargado" autocomplete="off" required/>
             <br><br>
             Costo de la actividad: <input type="number" step="any" name="Costo" required/>
             <br><br>

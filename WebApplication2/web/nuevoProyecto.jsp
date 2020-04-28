@@ -14,7 +14,7 @@
     <body>
         <h1>Crear nuevo proyecto</h1>
         <form action="ServletAdmin" method="get">
-            Nombre proyecto: <input type="text" name="proyecto" required/>
+            Nombre proyecto: <input type="text" name="proyecto" autocomplete="off" required/>
             <br><br>
             Descripción:
             <br><br>
@@ -23,9 +23,9 @@
             Lugar:
             <textarea name="lugar" rows="4" cols="40" maxlength="100" required></textarea>
             <br><br>
-            Foto: <input type="text" name="foto" placeholder="Example.jpg" required/>
+            Foto: <input type="text" name="foto" autocomplete="off" placeholder="Example.jpg" required/>
             <br><br>
-            Video: <input type="text" name="video" placeholder="Example.mp4" required/>
+            Video: <input type="text" name="video" autocomplete="off" placeholder="Example.mp4" required/>
             <br><br>
             <input type="submit" value="Create" />
             <input type="hidden" name="formid" value="6" />

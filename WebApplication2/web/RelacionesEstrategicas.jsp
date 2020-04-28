@@ -142,7 +142,7 @@
             <div class="hero-body" style=" background-image: url(styles/Imagenes/bg4.jpg)">
 
                 <div class="container has-text-centered">
-                    <h1 class="title" style=" align-content: center; font-family: var; font-style: inherit; font-size: 45px; color: gold">
+                    <h1 class="title" style=" align-content: center; font-family: sans-serif; font-style: inherit; color: gold">
                         Nuestros Aliados
                     </h1>
                     <h2 class="subtitle" style=" align-content: center; font-family: initial; font-style: oblique; color: white">
@@ -154,21 +154,31 @@
         <br>
         <br>
         <br>
-        
-        <section class="container">
+        <section class="container has-text-centered">
             <div class="columns">
                 <div class="columns">
-                    <img src="styles/Aliados/1.png" alt=""/>
+                    <img src="styles/Aliados/1.png" alt="" style=" width: 80%; height: 100%"/>
                 </div>
                 
                 <div class="columns">
-                    <img src="styles/Aliados/2.png" alt=""/>
+                    <img src="styles/Aliados/2.png" alt="" style=" width: 80%; height: 100%"/>
                 </div>
                 
                 <div class="columns">
-                    <img src="styles/Aliados/3.png" alt=""/>
+                    <img src="styles/Aliados/3.png" alt="" style=" width: 80%; height: 100%"/>
                 </div>
                 
+                <div class="columns">
+                    <img src="styles/Aliados/4.png" alt="" style=" width: 80%; height: 100%"/>
+                </div>
+                
+                <div class="columns">
+                    <img src="styles/Aliados/5.png" alt="" style=" width: 80%; height: 100%"/>
+                </div>
+                
+                <div class="columns">
+                    <img src="styles/Aliados/6.png" alt="" style=" width: 80%; height: 88%"/>
+                </div>                
             </div>
         </section>
     </body>

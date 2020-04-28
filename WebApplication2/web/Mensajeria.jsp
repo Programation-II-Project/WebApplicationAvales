@@ -74,7 +74,7 @@
             <br><br>
             Mensajes:
             <br><br>
-            <input type="text" name="fl_newMessage" id="fl_newMessage"/>
+            <input type="text" name="fl_newMessage" id="fl_newMessage" autocomplete="off"/>
             <input type="hidden" name="formid" value="100" />
             <input type="submit" value="Enviar">
             

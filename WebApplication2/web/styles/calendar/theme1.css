@@ -51,8 +51,8 @@
   }
   .cld-day.today .cld-number{
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     border-radius: 50px;
     background: #0056b3;
     color: #fff;
@@ -97,8 +97,8 @@
       }
       .cld-number.eventday{
         display: inline-block;
-        height: 20px;
-        width: 20px;
+        height: 30px;
+        width: 30px;
         border-radius: 50px;
         border: 1px solid #999;
       }

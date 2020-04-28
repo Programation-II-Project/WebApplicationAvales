@@ -95,7 +95,7 @@
                             <div class="field">
                                 <label class="label">Nombre de la actividad:</label>
                                 <div class="control">
-                                    <input class="input" type="text" name="Nombre" required/>type="text" name="Nombre" value="<%= actividadEditar.getNombre() %>" required/>
+                                    <input class="input" type="text" name="Nombre" required/><%= actividadEditar.getNombre() %>" required/>
                                 </div>
                             </div>
                             <br>

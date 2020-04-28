@@ -98,6 +98,7 @@
                 </select>
             </div>
             <br><br><br><br>
+            
             <div class="control">
                 <textarea name="f_descripcion" class="textarea is-focused" placeholder="Describe la ayuda que solicitas" rows="10" cols="40" required><%= ayudaActual.getDescripcion() %></textarea>
             </div>
@@ -105,22 +106,19 @@
                 <div id="navbarMenuHeroA" class="navbar-menu">
                     <div class="navbar-end">
                         <span class="navbar-item">
-                            <input class="button is-link" type="submit" value="Create"/>
+                            <input class="button is-link" type="submit" value="Editar"/>
                             <input type="hidden" name="formid" value="5" />
                         </span> 
                     </div>
                 </div>
             </div>
             
-            <div>
-                <button class="button is-info"onclick="goBack()">Volver</button>
-            </div>
-
-            <script>
-                function goBack() {
-                    window.history.back();
-                }
-            </script>
+            <div class="buttons is-centered">
+                <a href="solicitudDeAyuda.jsp">
+                    <button class="button is-info">Volver</button>
+                </a>
+            </div>            
+            
             
         </form>
       </div>

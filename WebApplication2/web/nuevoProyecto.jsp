@@ -18,6 +18,7 @@
 
     </head>
     <body>
+
         <!-- SEPARADOR -->
 
         <section class="hero is-dark">
@@ -30,6 +31,7 @@
                 </div>
             </div>
         </section>
+
         <br><br>
 
         <div class="columns">

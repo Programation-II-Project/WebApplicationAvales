@@ -30,6 +30,7 @@ public class messageLogic extends Logic
             + "(idMensajes, IdUserFrom, IdMensajeUserFrom, Mensaje, AdminStatus) "
             + "VALUES(0,'"+p_idUserFrom+"','"+p_idMessageUserFrom+"', '"+p_message+"','"+p_AdminStatus+"');");
     return message;    
+    
     }
     public List<NewMensaje> getIdMessageUserFrom(int p_idUser) throws SQLException
     {

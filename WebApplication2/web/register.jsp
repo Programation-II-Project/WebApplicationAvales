@@ -200,13 +200,6 @@
                                  </div>
                             </div>
                             
-                            <div class="field">
-                                <label class="label">Escriba de nuevo su contraseña</label>
-                                 <div class="control">
-                                    <input class="input" type="password" name="f_passwordComprobacion" placeholder="Ingrese su contraseña" required>
-                                 </div>
-                            </div>
-                            
                             <div class="field">                               
                                 <div class="field-body">
                                   <div class="field">
